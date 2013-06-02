@@ -1,0 +1,438 @@
+The Raspberry Pi Camera
+
+
+
+A few weeks ago, the Raspberry Pi Foundation launched their first peripheral, a 5MP camera. Priced at $25, the same price as the model A, it’s a very small PCB on which is an Omnivision OV5647 camera module. It connects to either the Model A or Model B Raspberry Pi’s using a 15cm 15 way ribbon connector.
+
+
+
+This article will take you through initial connection of the camera to your Raspberry Pi, will show you some of the basic commands used to take both still and video imagery. At the end, some of the more sophisticated features will also be explained. Not every option will be covered (new options are being added all the time so it’s difficult to keep up) but hopefully this article will give enough information for you to be able to cover most image taking tasks.
+
+
+
+Firstly though, a description of how the camera module came to be...
+
+
+
+History
+
+
+
+From its first launch the Raspberry Pi has had a connector on it to attach a camera to the GPU (The VideoCore 4 Graphics Processing Unit on the Raspberry Pi). This connection uses the CSI-2 electrical protocol and is a standard used in most mobile phones. It is an extremely fast connection, which on the Raspberry Pi is capable of sending 1080p sized images (1920x1080 x10bpp) at 30 frames per second, or lower resolution at even higher frame rates. It had always been intended at some point to release a camera module that could use this connection, as the ability to stream high speed video data through the GPU without any interaction with the ARM processor would always make the camera much more efficient than any USB attached webcam. It would also enable the use of the GPU’s ability to encode H264 video, or JPEG images in hardware.
+
+
+
+After some investigation of possible cameras, Gert Van Loo designed a prototype PCB using the Omnivision OV5647. A 5MP sensor was chosen as a good compromise between cost and quality. It was essential that the sensor could produce 1080p30 images and decent stills, but it also needed to be cheap to match the Raspberry Pi ethos of getting technology into the hands of students at the lowest possible cost. The Omnivision fitted the bill, and as a bonus, a camera driver (the piece of code running on the GPU that talks to the camera) and tuning (the parameters used to make the pictures look good) was already available in the Broadcom source tree.
+
+
+
+This prototype was ‘brought up’ with help from engineers at Broadcom in short order, and from that point it was simply a matter of productising the PCB and preparing the software.
+
+
+
+Unfortunately, that was nearly a year ago! It turns out that productising a tiny, simple PCB like the camera board is not a quick task! The prototype was re-designed to remove some unnecessary components, but more importantly, to move the camera crystal, used for timing, to the PCB itself. EMC testing had shown that the 25Mhz clock provided by the GPU caused too much interference as it passed up the ribbon cable to the PCB. Adding a crystal to the PCB itself stopped this interference. A couple more board designs later, to help with production line manufacturer and testing, and eventually, about a year after the first prototypes, the production board was ready.
+
+
+
+Meanwhile, work had been ongoing to write a couple of applications to make use of the camera, to update the GPU firmware to support the camera, and to improve the camera tuning as the basic tuning already in place had a number of obvious defects.
+
+
+
+Camera tuning is a complex task, which has been covered on the Raspberry Pi website, so I won’t repeat it here. Suffice to say, the end results are well worth the extra effort put in by David Plowman whilst at Broadcom. Thanks David.
+
+
+
+So, with the history out of the way, let’s take a look at getting your camera going.
+
+
+
+Setting Up.
+
+
+
+Firstly, it’s important to start with a warning. Cameras like these are static sensitive. You should earth yourself prior to handling the PCB (a sink tap/faucet or similar should suffice if you don’t have an earthing strap).
+
+
+
+There are only two connections to make, the ribbon cable need to be attached to the camera PCB and the Raspberry Pi itself. You need to get it the right way round or the camera will not work. on the camera PCB, the blue backing on the cable should be away from the PCB, and on the Raspberry Pi it should be towards the ethernet connection (or where the ethernet connector would be if you are using a model A).
+
+
+
+Although the connectors on the PCB and the Pi are different, they work in a similar way. On the Raspberry Pi, you need to pull up the tabs on each end of the connector. It should slide up easily, and be able to pivot around slightly. Fully insert the ribbon cable into the slot, ensuring it is straight, then gently press down the tabs to clip it into place. The camera PCB itself also requires you to pull the tabs away from the board, gently insert the cable, then push the tabs back. THe PCB connector is a little more awkward than the one on the Pi itself. There is a video on provided by the Raspberry Pi foundation on YouTube which shows the connections being made.
+
+
+
+So, we now have the hardware all attached, we now need to make sure we have the correct software installed. As explained above, there are some command line apps to install, and a firmware upgrade with the camera driver and tuning to install. This process may not be necessary in future as newer distro’s are released which already contain the required files.
+
+
+
+To update the firmware, libraries and applications, execute the following instructions on the command line.
+
+
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+
+
+Now you need to enable camera support using the raspi-config program you will have used when you first set up your Raspberry Pi.
+
+
+
+sudo raspi-config
+
+
+
+Use the cursor keys to move to the camera option and select enable. WHen you exit raspi-config it will ask to reboot. The enable option will ensure that on reboot the correct GPU firmware will be running (with the camera driver and tuning), and the GPU memory split is sufficient to allow the camera to acquire enough memory to run correctly. Running a camera and associated encoder does take up a big chunk of memory, as the images are large, and there need to be at least two of them in memory at any time in order to provide a double (in some cases triple) buffer which prevents tearing of images during display.
+
+
+
+Checking it works!
+
+
+
+OK, we have connected the hardware, and installed the software. Now we need to see if it all working correctly! The quickest way is just to type in
+
+
+
+raspistill -t 5000
+
+
+
+This runs the stills capture program for 5 seconds (or 5000 milliseconds. Note that all times used are in milliseconds). You should see the whole display replaced with a moving image of whatever the camera is looking at. If you don’t see the preview appear, or there are error messages displayed, go straight to the Troubleshooting section at the end of the article!
+
+
+
+So, what can it do?
+
+
+
+As with any camera, it can work in two ways. We can capture still images, just like a camera, or we can capture video, like a camcorder. The two demo applications provided handle these tasks separately. Although it would be quite possible to combine them into one application, that makes the code more complicated, and as demo code a lot of effort was put in to make it as easy to understand as possible. As an aside, the C language source code for the applications is publicly available from the Foundations github repository, and anyone is welcome to play around with it and alter it for their particular purposes. The code is well commented and uses the Doxygen commenting scheme so you can produce HTML documentation directly from the source code.
+
+
+
+So, on to the apps themselves. They are command line applications, and do not need to be run from a desktop environment since the preview output from the apps is superimposed over the top of any desktop or console being used. Typing just the name of the application, or adding --help or -? to the command line will produce a list of all the available options. The list is quite long, so you may want to pipe the output into ‘less’ so you can scroll up and down to read it
+
+
+
+raspistill | less
+
+
+
+raspivid | less
+
+
+
+Basic options
+
+
+
+Both applications use the -t option to specify the time they should run for. This time is measured in milliseconds.
+
+
+
+So “raspistill -t 3000” will run the camera for 3 seconds.
+
+
+
+In the stills case, and if a filename is specified, the capture of the still will take place at the end of the time period. In the video case, and again if a filename is specified, the capture starts straight away and will be as long as the time period.
+
+
+
+To specify the filename of the output file, you use the -o option. The following command runs the camera for 2 seconds and at the end of the period will take a still image, saving it to the file image.jpg.
+
+
+
+raspistill -o image.jpg -t 2000
+
+
+
+This command will do the same but will save a 2 second H264 video file called video.h264
+
+
+
+raspivid -o video.h264 -t 2000
+
+
+
+You don’t need to specify a filename for output - if you don’t then no capture is done, but the preview will still be run for the specified time. If you don’t specify a time, then 5 seconds is used as a default.
+
+
+
+So the following will take a picture after 5 seconds.
+
+
+
+raspistill -o image.jpg
+
+
+
+So we have made some files, but how do we see what they look like? Well, to view JPG images, the FBI program is quite useful. You can install it quickly using
+
+
+
+sudo apt-get install fbi
+
+Then you can easily display your JPG images, zoom in and out (use - and +) etc.
+
+
+
+fbi image.jpg
+
+
+
+To view video, you can use the already installed omxplayer.
+
+
+
+omxplayer video.h264
+
+
+
+
+Preview Options
+
+
+
+You can specify whether you want the preview disabled (-n), or whether it is to appear full screen (-f) or in a window (-p). You can also specify what opacity (-op) the preview windows is to have (so you can see the desktop underneath if necessary).
+
+
+
+So, to display the preview in a window on the display (at position 100,100, width 500, height 400) at 50% opacity. Note that opacity is measured from 0 (transparent) to 255 (opaque)
+
+
+
+raspistill -p 100,100,500,400 -op 128 -o image.jpg
+
+
+
+To disable preview completely,
+
+
+
+raspistill -n -o image.jpg
+
+
+
+
+So we have now pretty much covered the basics. You can take a stills picture, or video, and you can display the preview where you want on the screen. But there are many more options...
+
+
+
+Sizing Options
+
+
+
+You can easily specify the size of your captures using the -w (--width) and -h (--height) options. These do exactly what you might expect - they change the resolution of the resultant captures (either stills or video). But you can also change the quality of the JPG stills using -q (--quality) and the quality of the H264 encoding using -b (--bitrate). Both these formats use what is known as lossy compression, that is they throw away detail in order to compress the files. The more detail that is thrown away, the smaller the file, it’s simply a tradeoff between quality and file size.
+
+
+
+Some examples..
+
+
+
+raspistill -w 640 -h 480 -q 10 -o smallpic.jpg
+
+
+
+raspivid -w 640 -h 480 -b 500000 -o smallvid.h264
+
+
+
+The bitrate option is measured in bits per second. So in the example above, 500000 is 0.5Mbits/s. The is quite a low bitrate for 1080p video, but good enough for the small image size requested here. Full HD recording (the default) is supported, which is 1920x1080 at 30 frames per second (abbreviated to 1080p30), this requires a higher bitrate to avoid odd compression artifacts. It’s well worth trying out various bitrates just to see how it affects the image quality. It’s sometimes very surprising how low you can go before the video becomes unwatchable!
+
+
+
+raspivid -t 10000 -b 1000000 -o highcompression.h264
+
+
+
+In fact, the raspistill application allows us to save in 4 different file formats, although JPG is by far the fastest (and most common). The other formats supported are PNG, GIF and BMP. These are all lossless formats (no data is thrown away in order to decrease file size), and the file sizes are therefor much larger than JPG. They also take longer to save as there is no dedicated hardware acceleration in the GPU for them. You can select the type of file to output using the -e (--encoding) options.
+
+
+
+raspistill -t 1000 -e png -o image.png
+
+
+
+
+Timelapse Mode
+
+
+
+The raspistill app has a very useful feature called timelapse mode. Instead of just taking one picture, it takes sequence of pictures at a specified interval (use - tl) , until the timeout limit (-t)  is reached. So, to take a picture every 5 seconds over a period of 50 seconds, use the following.
+
+
+
+raspistill -t 50000 -tl 5000 -o image%d.jpg
+
+
+
+The -t and -tl options are fairly obvvious - but what’s that odd filename specification? Well, if you just specified something like
+
+
+
+raspistill -t 50000 -tl 5000 -o image.jpg
+
+
+
+then all you pictures would be saved the the same filename, image.jpg. So you end up with just one picture! By adding a %d in your filename specifier, the image number is added to the filename at the place where the %d is. So our first example above would save a set of file as image1.jpg, image2.jpg...image10.jpg. In fact, the filename is generated uses the same formatting as the C language printf statement, so you can do something like this..
+
+
+
+raspistill -t 50000 -tl 5000 -o image%04d.jpg
+
+
+
+which specifies the number will be formated as 4 digits long and use preceding 0’s to pad out those 4 digits, resulting in image0001.jpg, image0002.jpg...image0010.jpg being saved. See the printf format specifier documentation (man printf on a console command line) for more information.
+
+
+
+Changing Image Parameters
+
+
+
+Just like a compact camera, there are lots of options that can be applied to the images to change their effect, or the way they were taken. The following options are equally applicable to stills or video mode. Also note that some options may not be fully implemented at this stage, and you may see no effect when using them. This is because the applications were written to the full Camera API (application programming interface) available, not necessarily what was actually implemented under that API. I’m only going to describe working features here. Feel free to try all the options to see the effect they provide, and whether they actually do anything!
+
+
+
+Firstly, we have the basic image operations. These are sharpness (-sh [-100 to 100]), contrast (-co [-100 to 100]), brightness (-br [0 to 100] ) and saturation (-sa [-100 to 100]). All these settings are commonly found on cameras or even LCD televisions. Try them out with different numbers to see what effect they have - here’s a start point.
+
+
+
+raspistill -t 5000 -sh 100 -co 50 -br 25 -sa 50 -o image.jpg
+
+
+
+Image effects (-ifx) are quite fun. These apply interesting filters to the image, like negative or emboss. Only one effect can be applied at a time, and the full set of effects available are :
+
+
+
+negative, solarise, sketch, denoise, emboss, oilpaint, hatch, gpen, pastel, watercolour, film, blur saturation, colourswap, washedout, posterise, colourpoint, colourbalance and cartoon.
+
+
+
+raspistill -t 5000 -ifx negative -o image.jpg
+
+
+
+The colour effects option (-colfx) is interesting. Internally, the image is represented using a YUV colour space. YUV represents colour using the luminance, Y, and blue–luminance and red–luminance differences, UV. The colour effects option allows up to specify the values we are going to use for U and V. This gives us a quick and easy way to do black and white images, we just need to set UV equally to the middle of the range, which is 128. So
+
+
+
+raspistill -t 5000 -colfx 128:128 -o image.jpg
+
+
+
+Other values for U and V give varying blue and red differences from the middle. Try some numbers!
+
+
+
+
+The final image options I’m going to talk about are more about how the picture is taken rather than what processes are applied to the image. These are metering mode (-mm) and awb mode (-awb).
+
+
+
+Metering mode specifies what area of the incoming image is used for determining the brightness of the image. Internally, there is a target brightness that is required, and the camera system adjusts the internal gain to hit that target. But to do that it need to know what brightness the incoming image is so it can be boosted to the required level. The area of the image that is used to determine that incoming brightness is what is defined by the metering mode. There are two usefully distinct options: average and spot. Spot takes the very centre of the image and uses that, average uses the whole image. So if you have a scene with a very bright point in the centre, using spot will almost certainly underexpose, so you should use average in that case.
+
+
+
+raspistill -t 5000 -mm average -o image.jpg
+
+
+
+AWB stands for automatic white balance. This is a complicated subject, but in very simple terms, it’s the adjustment made to the image to compensate for different lighting conditions to make whites look white. For example, different types of office light produce different lighting conditions, and the system needs to compensate for those conditions so the white walls still look white in the photograph. By default the awb selection is done automatically uses Bayesian analysis of the scene to make an educated guess on the lighting conditions. However, you can specify the AWB approach being used depending on the scene being captured. The options are :
+
+
+
+auto, sun, cloud, shade, tungsten, fluorescent, incandescent, flash, horizon.
+
+
+
+So to set up the AWB for a room lit by tungsten filament bulbs :
+
+
+
+raspistill -t 5000 -awb tungsten -o image.jpg
+
+
+
+
+Anything else?
+
+
+
+We’ve covered many of the features available on the Raspberry Pi camera, but the best way to find out about them is to play with the camera, adjust settings and see what happens. To help with this there is a demo mode available which runs through a lot of the options automatically. The following example runs for 1 minute, changing an effect every 500ms (1/2second)
+
+
+
+raspistill -d 500 -t 60000
+
+
+
+One option not mentioned is the ability to output the image or video stream to stdout, so it can be piped to other applications (for example, network streaming). To do this, instead of specifying a filename for the -o option, you use the - (hyphen). The following example outputs the jpg data to stdout, where it is passed on the the file image.jpg. The effect is the same as specifying -o image.jpg.
+
+
+
+raspistill -o - > image.jpg
+
+
+
+Troubleshooting
+
+
+
+If you are here, and your camera is not working, there are a number of things to check to ensure everything is set up correctly.
+
+
+
+Are the ribbon connectors all firmly seated and the right way round?
+
+Is the camera module connector firmly attached to the camera PCB? (try removing and reseating)
+
+Have you run sudo apt-get update, sudo apt-get upgrade?
+
+Have you run raspi-config and enabled the camera?
+
+
+
+So, if things are still not working, try the following:
+
+
+
+Error : raspistill/raspivid not found. This probably means your update/upgrade failed in some way. Try it again.
+
+
+
+Error  : ENOMEM displayed. Camera is not starting up. Check all connections again.
+
+
+
+Error : ENOSPC displayed. Camera is probably running out of GPU memory. Check config.txt in the /boot/ folder. The gpu_mem option should be at least 128.
+
+
+
+If after all the above, the camera is still not working, it may be defective. Try posting on the Raspberry Pi forum (CSI Camera section) to see if there is any more help available there.
+
+
+
+
+
+
+Final Words
+
+
+
+As with everything Raspberry Pi, the camera is meant to be a learning experience. Many options are available for you to try out, some might be useful, some not so useful. Try them out, experiment, you cannot break it using any of the options!
+
+
+
+The source code for the applications is publicly available, and was written in a very straightforward fashion (in C) with lots of comments to make it easier for people to modify it to their own purposes. Feel free to pile in, change stuff, see what it does. If you add a great new feature, make sure you post about it on the Raspberry Pi forums - you never know, it might make it in to the official applications!
+
+
+
+Good Luck!
+
+
+(James Hughes)
