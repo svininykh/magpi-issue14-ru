@@ -1,0 +1,166 @@
+Programming in Charm
+----------------------------
+Having covered RISCOS on the Raspberry Pi and Charm data types in the first two articles, it's my pleasure to welcome you to the third article in the series on the Charm programming language. If you've been following the series, you may well have already installed Charm under RISCOS and tried out the printed exercises. If not it's not too late to go back and do so!
+
+In this article I am going to cover some of the syntax and semantics of Charm illustrated by simple examples which I hope will whet your appetite and arm you (no pun intended!) with enough knowledge to start writing your own Charm programs.
+
+Charm is an object oriented structured programming language. The structured program theorem which provides the theoretical basis of structured programming states that three ways of combining programs namely sequencing, selection, and iteration are sufficient to express any computable function.
+
+Sequence
+--------
+<sequence.png>
+
+In the absence of flow of control statements related to selection and iteration, Charm programs execute a line at a time from top to bottom e.g.
+
+   #int x := 1;
+   int y := 2;
+   int z := x + y;
+   do_this ();
+   do_that ();#
+
+however even in this simple example #do_this# and #do_that# cause call outs to named procedures that contain their own code (not shown here). Although white space is ignored, usually each line contains a single statement which ends with a semicolon, with one common statement type being the assignment statement in which the left hand side is assigned the value of the expression on the right hand side with the two being separated by the assignment operation #:=#.
+
+Selection
+---------
+<selection.png>
+
+Often programs want to take different courses of action under different conditions and this is handled by selection which in Charm is provided by the #if# and #case# keywords.
+
+#if# checks whether the following conditional expression evaluates to #true# in which case the next statement, or block of statements enclosed in curly brackets is executed, or #false# in which case it is not.
+
+The #if# keyword has an optional associated #else# keyword which if present introduces the statement or statements that should be executed if the boolean expression is not #true# e.g.
+
+   #if x = 1
+       y := 0;
+   else
+       y := 1;#
+
+Note the use of indentation to help highlight the flow of control logic.
+
+The #case# keyword introduces a series of clauses that match the value of an integer variable against a number of possible constant values and chooses a block of code to execute e.g.
+
+       #case x
+       {
+   1:      handle_1 ();
+   2:      handle_2 ();
+   otherwise:
+           handle_other (x);
+       }#
+
+Note the use of the #otherwise# clause to catch any values that do not match.
+
+Iteration
+---------
+<iteration.png>
+
+Sometimes the same code needs to be executed many times within a loop, often to process each member of an array. This is handled by iteration using the #while#, #repeat# and #for# keywords.
+
+#while# checks whether the following conditional expression evaluates to true in which case the next statement, or block of statements enclosed in curly brackets are executed until the expression evaluates to false e.g.
+
+   #while true loop ();#
+
+#repeat# is similar to while but the conditional expression is at the end of the loop and must evaluate to #false# for the loop to be repeated e.g.
+
+   #repeat loop (); false;#
+
+#for# allows a control variable to be initialised, incremented and tested all in one statement e.g.
+
+   #for (int i := 0 step i := i + 1 while i < 10) a[i] := 0;#
+
+initialises the contents of an integer array of size 10 to 0.
+
+Boolean expressions
+-------------------
+Boolean expression appear as part of many flow of control statements in Charm and can be composed of the following comparison operators:
+
+   = - equal
+   # - not equal
+   :=: - equal (pointer comparison)
+   :#: - not equal (pointer comparison)
+   > - greater than
+   < - less than
+   >= - greater than or equal to
+   <= - less than or equal to
+
+If A and B are boolean expressions, they can be combined using the logical operators:
+
+   A and B - both A and B must be true
+   A or B - either A or B must be true
+   not A - A must be false
+
+nil
+---
+The #nil# keyword occupies a special place in the Charm language and can be used to initialise and test pointers (ref variables). It indicates that the pointer is not currently setup to point anywhere, and an attempt to use it will result in an exception that stops program execution.
+
+Tree recursion
+--------------
+The following program uses tree recursion and the language constructs to draw a tree on the screen:
+
+<tree.png>
+
+#import	lib.Maths;
+import	lib.Vdu;
+
+module Tree
+{
+   const
+      MODE	     = 31,            | display mode		|
+      OFFSET    = 30,	           | display offset	|
+      LEVELS    = 7,             | branch levels		|
+      VARS	     = 1000;          | variations		|
+
+   int xmax, ymax, xshift, yshift; | screen parameters	 |
+
+   proc variation (real value, real deviation) real
+   {
+      return value * (1 + deviation * (0.5 - 1.0 * (Maths.random () mod (VARS + 1)) / VARS));
+   }
+
+   proc branch (int level, real length, real angle, int xs, int ys)
+   {
+      int xe := xs + length * Maths.fn.cos(angle);
+      int ye := ys + length * Maths.fn.sin(angle);
+      Vdu.plot (Vdu.P_POINT + Vdu.P_PLOT_F_ABS, xs l_sl xshift, ys l_sl yshift);
+      Vdu.plot (Vdu.P_PLOT_F_ABS, xe l_sl xshift, ye l_sl yshift);
+      if level > 1 + Maths.random () mod 2
+      {
+         real scale := variation (0.65, 0.25);
+         int branches := level - Maths.random () mod 3;
+         if branches <= 0 return;
+         real range := variation (1.5, 0.2);
+         for int i := 0 step inc (i) while i <= branches
+         {
+            real factor := variation (0.5, 0.8);
+            if i = branches factor := 0;
+            branch (level - 1,
+                    variation (length * scale, 0.2),
+                    variation (angle, 0.3) + i * range / branches - range / 2,
+	               xe - (xe - xs) * factor, ye - (ye - ys) * factor);
+         }
+      }
+   }
+
+   export proc ~start ()
+   {
+      Vdu.mode (MODE);
+      xshift := Vdu.mode_var (MODE, Vdu.MV_X_EIG_FACTO65);
+      yshift := Vdu.mode_var (MODE, Vdu.MV_Y_EIG_FACTOR);
+      xmax := Vdu.mode_var (MODE, Vdu.MV_X_WINDOW_LIMIT) + 1;
+      ymax := Vdu.mode_var (MODE, Vdu.MV_Y_WINDOW_LIMIT) + 1;
+      Vdu.g_colour (0, 7);
+      Vdu.plot (Vdu.P_POINT + Vdu.P_PLOT_F_ABS, OFFSET l_sl xshift, OFFSET l_sl yshift);
+      Vdu.plot (Vdu.P_RECTANGLE_FILL + Vdu.P_PLOT_F_ABS,
+        (xmax - OFFSET - 1) l_sl xshift,
+        (ymax - OFFSET - 1) l_sl yshift);
+      Vdu.g_colour (0, 0);
+      branch (LEVELS, (ymax - OFFSET) / 3, Maths.fn.asn(1), (xmax - OFFSET) / 2, OFFSET);
+   }
+}#
+
+To make the tree look more realistic some branch parameters have been randomised, for example their length and the angle between them.
+
+For this month's exercise add some fruit (hint randomly draw some coloured circles at or near branch ends).
+
+Next Time
+---------
+Next time I intend to talk about writing containers in Charm, namely sets, lists and maps.
