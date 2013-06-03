@@ -1,0 +1,31 @@
+Input/Out Processor for the Raspberry Pi
+by Philip Munts
+Munts Technologies
+As an embedded system developer, I awaited the release of the Raspberry Pi with great interest and anticipation.  I ordered one early on and, like many others, waited for it to arrive.  There are many, many embedded system possibilities for a $35 Linux computer.
+Linux brings a great deal of capability to the party, especially with regards to networking and USB support.  But one thing Linux systems, including the Raspberry Pi, lack: Microsecond I/O (input/output) signal timing resolution.  The multiuser, multitasking, virtual memory foundation of Linux simply prevents it from responding to or timing external events with predictable microsecond resolution.
+Some interesting projects that would require microsecond timing resolution include:
+IR (Infrared) remote control protocols, such as the LEGO® Power Functions RC protocol
+DCC (Digital Command Control) for model railroads
+Ultrasonic ranging with a device like the Parallax Ultrasonic Distance Sensor
+The other capabilities of Linux are so compelling that attempts have been made from time to time to graft in real time support.  None of these have been particularly successful, at least in terms of “mind share”.  But fortunately there is another way: the I/O processor (Figure 1).
+Figure 1 -- I/O Processor
+An I/O processor is simply a separate computer dedicated to I/O operations, usually acting as a slave to the “main” or “real” processor.  The I/O processor runs its own software, separate from the main processor.  Depending on the implementation, the I/O processor software may or may not be alterable from the main processor.
+The I/O processor idea is not new.  The IBM 7094 mainframe computer of 1962 could use a 7044 computer for all I/O.  Processing was performed on the 7094 and I/O done on the 7044.  Even the original IBM PC, released in 1981, had an 8048 8-bit microcontroller in the keyboard to handle key press timing.  Today, the I/O processor idea has been pushed all the way down to single chip systems: The NXP LPC4300, itself a single chip ARM Cortex-M4 microcontroller, includes a separate ARM Cortex-M0 microcontroller, for real time processing, on the same chip.
+The Raspberry Pi Model B offers three different I/O interfaces: Ethernet, USB, and the P1 expansion header.  A case can be made for attaching an I/O processor to any of the three interfaces.  Ethernet and USB offer good bandwidth and standard interfaces.  An I/O processor board built to attach to either Ethernet or USB would also be able to connect to any other Linux, Windows, or Mac computer.  But both Ethernet and USB impose significant cost and complexity penalties upon the I/O processor board.  It would be difficult (though not impossible) to design an I/O processor board, with USB or Ethernet, costing less than the Raspberry Pi itself.
+The P1 expansion header provides several different I/O interconnect: I2C, SPI, UART, and basic GPIO.  Any or all of these may be used to communicate with a microcontroller.
+I have designed and built an I/O processor board for the Raspberry Pi using the NXP LPC1114, an ARM Cortex-M0 single chip microcontroller.  I selected this device for several reasons:
+Low cost.  I paid USD $1.26 each for the LPC1114FN28 from Avnet Express.  The LPC11xx family is essentially NXP's 32-bit attack on the 8-bit microcontroller market.  They are priced less than almost any PIC or AVR of similar capability.  The LPC1114 internal oscillator is also stable enough that no crystal or external oscillator is required, saving even more money.
+DIP package.  I can do surface mount soldering, given proper equipment, but I can't say I enjoy it.  As far as I know, the LPC1114FN28 and some PIC32MX devices (more expensive) are the only 32-bit microcontrollers available in a easily hand-solderable DIP package.
+ISP (In System Programming) without additional hardware.  NXP ARM Cortex microcontrollers have a built-in serial port boot loader that allows them to be reprogrammed without any additional hardware.
+Good support by free development tools.  ARM microcontrollers, including the LPC1114, are very well supported by binutils/gcc/newlib/gdb compiler toolchain.
+Figure 2 -- Assembled Board
+Some other Raspberry Pi expansion boards contain a microcontroller (usually an AVR) as an addition or afterthought.  The LPC1114 microcontroller is central to this board's design.  Even though it only contains one integrated circuit, an LED, and 8 resistors and capacitors, this board offers:
+8 GPIO (General Purpose Input/Output) signals brought out to screw terminals.
+5 terminals can be configured as A/D (Analog to Digital) inputs for measuring analog signals.
+3 terminals can be configured as timer inputs, for counting or measuring incoming pulses.
+5 terminals can be configured as timer outputs, such as PWM (Pulse Width Modulation) outputs for controlling motors.
+Not all input/output functions are available at the same time; for example, P1.0 can be configured for any of  digital input, digital output, analog input, timer/counter input, but only one function at a time.
+
+For more information about the LPC1114 I/O Processor, including how to purchase one, visit:
+http://tech.munts.com/RaspberryPi/expansion/LPC1114
+In future articles I will describe in more detail how to use the LPC1114 I/O processor to build some interesting control projects with the Raspberry Pi. 
