@@ -1,0 +1,168 @@
+Controlling The Maplin Robotic Arm with Python by Peter Lavelle
+
+Introduction
+
+This article expands on the work by Jamie Scott, et al  in the Wikihow article at http://www.wikihow.com/Use-a-USB-Robotic-Arm-with-a-Raspberry-Pi-(Maplin) and allows you to control the movement of the arm using a sequence of instructions read from a CSV (Comma Separated Variables) formatted file by a Python script.
+
+This article assumes you are using the Raspbian distribution but you should also be able to get this working using the Occidentalis distribution from Adafruit (More information about this distribution can be found at http://learn.adafruit.com/adafruit-raspberry-pi-educational-linux-distro/overview)
+
+
+Configuring your Pi
+
+Before you can start using the script, there are a few things you will have to do to get your Pi ready.  
+
+The first thing you will need to do is add the user account you are using on the Pi to the 'plugdev' group. Assuming you are using the default 'pi' user account, the command to do this will be: sudo usermod -aG plugdev pi
+
+The next step is to add a udev rule to allow the pi user to send commands to the arm. To do this, create a file called /etc/udev/rules.d/85-robotarm.rules, using the command sudo nano /etc/udev/rules.d/85-robotarm.rules with the contents below:
+
+
+SUBSYSTEM=="usb", ATTRS{idVendor}=="1267", ATTRS{idProduct}=="0000", ACTION=="add", GROUP="plugdev", MODE="0666"
+
+To save the file, press ctrl-x and then press ‘Y’ followed by Enter.
+
+You’ll then need to install the Python USB libraries. I found that the one from the Apt repository was slightly out of date, so I had to install the Apt version first and then upgrade it using the pip command. The command below will do this:
+sudo apt-get install python-pip -y && sudo pip install pyusb --upgrade
+When the Python USB libraries have been installed, reboot your Pi so that the changes to udev and the Pi user account take effect with the command: sudo shutdown -r now
+
+
+
+
+Connect the Arm
+
+When the Pi has been rebooted, connect the Arm to a free USB port and turn it on. A USB hub should not be needed here. To check that the Pi has successfully detected the Arm, execute the command  dmesg | grep usb | grep 1267 
+
+If the arm has been detected successfully you should see output similar to the line below:
+
+[  252.790554] usb 1-1.3: New USB device found, idVendor=1267, idProduct=0000
+
+If you don’t see the result above, then turn off the arm using the power switch, unplug from the USB port, plug the arm back in and turn the power back on.
+
+
+
+
+Getting the code
+
+The scripts can be found on Github at https://github.com/peterlavelle/maplinarm 
+
+You can clone the repository directly on to your Pi if you have the Git client installed. Installing the Git client on Raspian is as simple as running the command: sudo apt-get install git-core
+
+When you have the git client installed, run the command: git clone https://github.com/peterlavelle/maplinarm to pull down a copy of the Python code. This command will clone the repository into a subdirectory called ‘maplinarm’ and should pull down the files listed below:
+
+git clone https://github.com/peterlavelle/maplinarm
+Cloning into 'maplinarm'...
+remote: Counting objects: 35, done.
+remote: Compressing objects: 100% (23/23), done.
+remote: Total 35 (delta 8), reused 12 (delta 2)
+Unpacking objects: 100% (35/35), done.
+cd maplinarm/
+ls
+commander.py  commands.csv  maplinrobot.py  README.md
+
+Making the scripts executable
+
+Now we need to make the scripts executable by the Raspberry Pi. to do this, change into the directory you cloned the repository down to using the cd command and run the command chmod 755 *.py This will give all files ending in ‘.py’ executable permissions. You can double-check this with the command ls -la *.py and looking for the ‘x’ in the left-hand column of the output on each line. See example listing below:
+
+drwxrwxr-x  3 pete pete 4096 May 19 14:11 .
+drwx------ 37 pete pete 4096 May 19 14:11 ..
+-rwxrwxr-x  1 pete pete 1726 May 19 14:11 commander.py
+-rwxrwxr-x  1 pete pete 2388 May 19 14:11 maplinrobot.py
+
+
+
+Programming the Arm
+
+Ok, now on to the good part. The script commander.py will read in commands from a CSV file passed to it as an argument. 
+
+There is an example file called ‘commands.csv’ in the Git repository to help you get started. So lets open this file up and take a look with the command nano commands.csv 
+Contents are included below for reference:
+
+shoulder-up,1.00,1.00
+elbow-down,1.00,2.00
+base-clockwise,4.00,1.00
+shoulder-down,1.00,1.00
+grip-close,1.00,1.00
+base-anti-clockwise,4.00,2.00
+grip-open,1.00,1.00
+elbow-up,1.00,2.00
+
+
+
+As you can see here, the basic format for each command is:
+
+command,duration,pause
+1. command is any valid command found in the maplinrobot.py script
+2. duration is the time in seconds to execute the command for. Make sure all values are entered to two decimal places. E.g, for 1 second specify a value of 1.00 here.
+3. pause is the time in seconds to wait before executing the next command in the   sequence.  Make sure all values are entered to two decimal places. E.g, for 1 second specify a value of 1.00 here.
+The commander.py script will execute each line in the CSV file as a seperate command for the duration you set and will wait for the number of seconds set in the pause value before moving on to the next command in the sequence.
+
+Valid commands and a description for each can be found below:
+
+1. 'base-anti-clockwise' - Rotates the base ant-clockwise
+2. 'base-clockwise' - Rotates the base clockwise
+3. 'shoulder-up' - Raises the shoulder
+4. 'shoulder-down' - Lowers the shoulder
+5. 'elbow-up' - Raises the elbow
+6. 'elbow-down' - Lowers the elbow
+7. 'wrist-up' - Raises the wrist
+8. 'wrist-down' - Lowers the wrist
+9. 'grip-open' - Opens the grip
+10. 'grip-close' - Closes the grip
+11. 'light-on' - Turns on the LED in the grip
+12. 'light-off' - Turns the LED in the grip off
+13. 'stop' - Stops all movement of the arm
+
+Try this out yourself by editing the commands.csv file in the repository and replacing the contents with your own instructions to the arm
+
+
+Running your program
+
+Running your program is as simple as running the command ./commander.py commands.csv from the command line on your Pi. The script will output each step your program as it runs it. You can find a example output of my terminal below of an example run using the commands.csv file in the repository:
+
+pete@frankenpi:~/maplinarm$ ./commander.py commands.csv 
+Running command 'shoulder-up' for a duration of 1.000000 second(s) with a pause of 1.000000 second(s)
+Sending command shoulder-up
+
+Done.
+
+Running command 'elbow-down' for a duration of 1.000000 second(s) with a pause of 2.000000 second(s)
+Sending command elbow-down
+
+Done.
+
+Running command 'base-clockwise' for a duration of 4.000000 second(s) with a pause of 1.000000 second(s)
+Sending command base-clockwise
+
+Done.
+
+Running command 'shoulder-down' for a duration of 1.000000 second(s) with a pause of 1.000000 second(s)
+Sending command shoulder-down
+
+Done.
+
+Running command 'grip-close' for a duration of 1.000000 second(s) with a pause of 1.000000 second(s)
+Sending command grip-close
+
+Done.
+
+
+Running command 'base-anti-clockwise' for a duration of 4.000000 second(s) with a pause of 2.000000 second(s)
+Sending command base-anti-clockwise
+
+Done.
+
+Running command 'grip-open' for a duration of 1.000000 second(s) with a pause of 1.000000 second(s)
+Sending command grip-open
+
+Done.
+
+Running command 'elbow-up' for a duration of 1.000000 second(s) with a pause of 2.000000 second(s)
+Sending command elbow-up
+
+Done.
+
+
+All commands executed. Stopping the arm
+
+
+
+And that’s it. If you have any ideas on how this could be improved or expanded (Maybe by adding some sort of control logic to the commands file, for example) then feel free to contact my via the contact form on my Blog at http://solderintheveins.co.uk/contact-me/

@@ -1,0 +1,139 @@
+PLAYING HISTORIC ARCADE GAMES ON THE RASPBERRY PI 
+
+A BRIEF HISTORY OF ARCADE GAMES
+For those of a certain ‘Vintage’ (myself included), I remember the first ‘Video Games’ arriving on the scene in the late 1970s. Historically, ‘Amusement Arcades’ were located at ‘Holiday’ destinations, predominantly used by children and filled with Electro/Mechanical games and Pinball Machines dating back to the 1950’s and 60’s.
+Starting with the introduction of the first commercially successful ‘Discrete Logic’ or ‘Digital’ Video Game, Pong (Atari Inc: 1972), then following with second generation CPU powered machines such as Space Invaders (Taito/Midway: 1978), Asteroids (Atari Inc: 1979), Galaxian (Namco/Midway: 1979), Defender (Williams Electronics: 1980), Pac-Man (Namco/Midway: 1980) and Donkey Kong (Nintendo: 1981) all this changed..... 
+A ‘Mainstream’ behemoth of an industry was born, Arcade Games began appearing everywhere, dedicated Arcade’s in Towns and Cities, game cabinets in Petrol Stations, Supermarkets, Restaurants, Pubs/Bars even Chip Shops! I recall frequenting one particular ‘Place’, no pun intended, because it had Centipede (Atari Inc: 1980). 
+At its peak in 1981, in the US alone, Arcade Games generated annual revenues of over $5 Billion (equivalent to $12.52 Billion in 2012). However, in 1983 due to a variety of factors the US endured ‘The Video Game Crash’, financial markets lost faith in Video Games deeming them ‘A Passing Fad’ (how prophetic!?), the ‘Golden Age of Video Games’ was over.....  
+ 						
+Fig.1 The biggest selling Arcade Game of all time with 400,000 Units Sold.It is estimated, since its release, Pac-Man has generated $7.61 Billion* in inflation adjusted revenues including ‘Coin Drop’ (i.e. Money Inserted). 
+
+*These are ‘Arcade Only’ figures, excluding licensed home conversions (the ‘Official’ Atari VCS/2600 Cartridge alone sold 7 Million copies) or merchandising income! 
+
+In 1999 Billy Mitchell achieved the first ‘Perfect Score’ of 3,333,360by eating every possible dot, power pellet, fruit, and enemy! 
+
+Trivia - The Original Japanese name for the Game was Puck-Man. In the West it was changed to Pac-Man because it was thought vandals would change the letter 'P' into an 'F' (think about it!)
+		
+Pac-Man (Fig.1)
+
+Fig.2 Designed by Atari Inc legend Ed Logg, also responsible for Centipede (1980) and Gauntlet (1985). At the time ‘Raster Graphics’ (Bitmapped Sprites) were not able to display a high enough resolution to do justice to his vision, so a ‘Vector’ Display Unit was employed. This makes Asteroids, or any other Vector Game, visually impressive in a way that is hard to convey in an Emulator.
+
+Trivia - Exploiting a ‘Loophole’ in the game logic a strategy called ‘Lurking’ was used by players as a method to achieving HUGE scores.This reached its zenith in 1982 when Scott Safran played on a 
+single game for an entire weekend to achieve a score of 41,336,440.   
+								
+										Asteroids (Fig.2)
+						
+Fig.3 The first Video Game Designed by Shigeru Miyamoto, creator of Mario, Zelda, F-Zero and other game franchises that propelled Nintendo to be the market Leader in Home Consoles in the 1980’s and much of the 90’s.
+
+The excellent 2007 documentary The King of Kong: A Fistful of Quarters explores the world of competitive classic arcade gaming and tells the story of Steve Wiebe's quest to break Billy Mitchell's (yes, him again!) 25 year old record score of 874,300.	
+
+Trivia - Although he may look familiar, the character in the Game is NOT Mario but Jump Man and he was a carpenter, not a plumber! He was eventually re-named because he bore an uncanny resemblance to Nintendo of America’s office landlord. 
+
+
+		Donkey Kong (Fig.3)
+RETRO GAMING, EMULATION & MAME
+Peter De Vries was an American editor and novelist known for his satiric wit, he once wrote ‘Nostalgia isn't what it used to be’, but I disagree, sometimes it is! ‘Old School’ or ‘Retro Gaming’ has a substantial following and not just because of nostalgia, due to the restrictive/primitive nature of the Hardware, many ‘Retro Games’ are defined by their elegant simplicity and gameplay, Atari Inc co-founder Nolan Bushnell’s quote that the perfect game is ‘Easy to Learn, Difficult to Master’ can be associated with all titles from the ‘Golden Age of Video Games’. 
+In computing, an Emulator is hardware or software, or both, that duplicates (or emulates) the functions of one computer system (the guest) in another computer system (the host), different from the first one, so that the emulated behavior closely resembles the behavior of the real system (the guest). When running an emulator such as MAME it may seem odd given the disparity of processing power, 32Bit ARM vs 8Bit Z80/6502 or 16Bit 68000, some ‘Working’ games will be slow on the Raspberry Pi Why? Because Emulation is VERY processor intensive, the ‘Host’ system has to be many times more powerful than the ‘Guest’ system. 
+M.A.M.E (Multiple Arcade Machine Emulator) was started in 1997 by the Italian programmer Nicola Salmoria, it is an emulator application designed to recreate the hardware of Arcade Game systems in software. Originally written for Ms-Dos to emulate Pac-Man, Pengo (Sega: 1982), Crazy Climber (Nichibutsu: 1980), Lady Bug (Universal/Taito: 1981) and Rally X (Namco/Midway: 1980) it now supports over 10, 000 ROMS (Although not all are playable). So, now these ‘Classic’ Arcade Games are playable at home without the need to purchase the highly collectable and expensive Original Cabinets, or insert any coins, and remember, this is emulation, they are NOT conversions, you are playing the original game code! 
+
+Fig.4 Consisting of gameplay, based on fast button pressing which set the basics for sequels and similar games, with many a home version destroying joysticks in the process! Arcade players used various techniques for faster button pressing such as rapidly swiping coins of other solid implements (personally I found the back of a hair brush a very effective method!)
+
+Trivia - All events have hidden “Easter Eggs” to give additional bonus points. In this event throwing the javelin off the top of the screen you will hit a bird which falls to the ground and a 1000 point bonus is awarded!
+Track & Field (Fig.4)
+
+
+Fig.5 Designed by Dave Theurer another Atari Inc genius who brought the world Missile Command and Tempest (both in 1980) this was the first arcade game to feature 3-D Polygon graphics.
+
+Trivia - At the time the graphics and camera control options confused and alienated players who responded negatively to the game, it was a commercial flop with only 750-1500 Units produced. However, due to its historical significance and limited production run is now heavily sought after by collectors, with astronomical prices for an original cabinet!
+
+										I-Robot (Fig.5)
+ROMS AND SAMPLES
+ROM files will be required to run specific games, these are readily available on the Internet from thousands of emulation sites, just Search for ‘MAME ROMS’. MAME requires the need of the correct ROM revision for individual versions of the core program, luckily, it will DISPLAY and NAME the missing Rom files, so just try another ROM rev. 
+Some early Arcade Games used additional ‘Discrete Logic’ circuits for sound (Astro Blaster (Sega: 1981), Berzerk (Stern Electronics: 1980), Donkey Kong (Certain Sounds e.g. The ‘Jump’), Gorf (Bally Midway: 1981) etc). MAME cannot Emulate these so SAMPLES are required to run correctly (Put them in the “sample” Folder). 
+Due to the complexities of Emulation as previously discussed most games up to the mid/late 1980s should be fine, although not all due to additional ‘Custom’ processors in the original cabinet which require additional processing to emulate. 
+To get you started here is a list of some great games with the Game Name, MAME Code, Revision Required and whether ‘Samples’ are needed (Available Here - http://www.raspberrypi.org/phpBB3/viewtopic.php?f=78&t=29427)
+
+
+
+
+
+
+
+
+
+COMPILING AND RUNNING ADVMAME
+Hardware - Will compile on a 256 or 512MEG variety Raspberry Pi (using the ‘Wheezy’ Operating System*).  
+Over Clock - Due to the processing power required it is advised to run MAME with the fastest Over Clock that is stable on your System    
+(use the config (Type - sudo raspi-config))
+Source Code - Advancemame-0.106.0.tar.gz (Available Here - http://sourceforge.net/projects/advancemame/files/advancemame/) 
+One thing of note, AdvMAME-0.106.0 is NOT the latest revision, this is intentional, new MAME releases offer greater accuracy in Emulation, not optimisation in performance. AdvMAME-1.2 will in fact produce inferior results given the Hardware.
+Dependencies Required - SDL1.2-dev 
+Additional Software Required - GCC 4.7 Compiler 
+Additional Files Required - Game ROMS (a copy of the data from an arcade game's main board), Game SAMPLES
+
+*NB! - If you are using Image 2012-12-16-wheezy-raspbian, you MUST uninstall the Pulse Audio Drivers! (Default Sound Drivers in this version of Raspbian (don’t worry, it will revert to ALSA). To uninstall the Pulse Audio Drivers Type - apt-get --purge remove pulseaudio before you start compiling 
+
+I’m a great believer in using any and all tools available when using computer systems, you could use command line instructions in a Terminal (or Console) to download, extract and place the Files in appropriate positions, however, it’s much easier to use the X11 Windows environment. Compiling AdvMAME takes the Raspberry Pi’s computational and especially RAM recourses to their limits which is why the instructions prescribe not doing so under X11 Windows, even though it is a ‘Minimal’ environment it still has an overhead! 
+ 
+1. Compile STRAIGHT from Console (DON’T go into ‘X’) 
+2. Make sure you have the RAM split set up attributing ALL the RAM to the ARM CPU (use the config (Type - sudo raspi-config))
+3. Compile as a ROOT user (set up a root password for this if you haven’t already! (Type - sudo passwd root) 
+Type - su root (then enter your password)
+4. Install libsdl1.2-dev dependencies
+Type - apt-get install libsdl1.2-dev
+5. Install the GCC 4.7 Compiler 
+Type  - apt-get install gcc-4.7
+6. Change over to the 4.7 Compiler -
+Type - export CC=gcc-4.7
+Then Type - export GCC=g++-4.7
+Now just CD into the directory where you uncompressed the source code
+Type - ./configure (wait until it has completed configuring)
+Then Type - make (it will take a few hours!!!), once it has competed compiling
+Type - make install (optional, but useful in this case as it negates the need for ‘CDing’ into the folder when you want to use it!)
+7. Exit ROOT (NB If you don’t the Default folders that are set up automatically in Step 8 will have ROOT USER Privileges!)  
+Type - exit
+8. Now start the executable so it sets up all the correct folders and configuration Files -
+Type - advmame (it will give you a message telling you it’s set these up with ‘Default Options’)
+9. Start ‘X’
+10. There should now be a hidden folder .advance in directory home/pi. If you cannot see it, right click on your mouse and tick the ‘show hidden folders’ box 
+11. Put any ROMS you have in the appropriate folder (rom) and SAMPLES in (sample) there is no need to uncompress them! 
+12. In the advmame.rc add the line to Drive the correct Video Signal - 
+device_video_clock 5 - 50 / 15.62 / 50 ; 5 - 50 / 15.73 / 60 (If using HDMI Output)
+device_video_clock 5 - 50 / 15.73 / 60 (If using Composite Output)
+13. Change the display_resize Line -
+From:	display_resize mixed
+To:	display_resize fractional 
+14. Close and Save it
+15. Exit ‘X’ (Again, optional, but running straight from Console gives a significant performance increase AND Fullscreen Display!) 
+16. Now just Type - 
+advmame ‘Name of ROM’ (the MAME code for the Game, NOT its Title!)
+e.g. advmame dkong (obviously you MUST have the ROM File for the Game you attempting to run!) 
+
+
+
+
+
+
+
+
+
+
+CONTROLS
+Control is with the cursor Keys, Fire/Jump Buttons are generally - Left Ctrl, Space and Left Alt (Joysticks and Gamepads can also be configured and used). ALL Options for Control Settings, Video, Sound, Dip Switches etc are easily modified in the Options Menu and can be saved for General ‘ALL Games’ or Individual Games ‘This Game’. 
+
+5 - Add Coins
+1 - 1 Player
+2 - 2 Players
+TAB - Options Menu (navigate with Cursor Keys and Enter)
+Escape - Exit
+
+SETTINGS
+MAME settings can be infinitely customised, I have found the ‘Default’ settings read from the advmame.rc are perfectly acceptable in most cases but there are a few exceptions - 
+
+1. The ‘default’ advmame.rc, display_color is ‘auto’. Vector games - Asteroids, Star Wars, etc will suffer from an incorrect application. DON’T change the advmame.rc! In the Options Menu (TAB) navigate to Video, Color and change ‘auto’ to ‘bgr16’ then ‘Save for this Game’. 
+2. The ‘default’ advmame.rc, display_mode is ‘auto’ and display_magnify is ‘1’. This will affect certain games which will suffer from an incorrect application in Aspect Ratio (e.g. Burger Time (Data East: 1982), I-Robot (Atari Inc: 1983) and Track & Field (Konami: 1983)). Again, DONT change the advmame.rc! In the Options Menu (TAB) navigate to Video, magnify and change ‘1’ to ‘2’ then ‘Save for this Game’
+3. One setting I would consider changing is the display_resizeeffect from ‘auto’ to ‘none’. Personally I’m not a great fan of any of these in emulations and they will be applied when changing the magnification mode as described above. However, they can be scrolled through in the Video Options Menu, experiment, see if you like any of them!  
+4. For those of us old enough to remember ‘Arcades’, ever wonder why the SAME game was harder/easier in one venue than in others? Well, they probably WERE! Inside the cabinet there were often toggle ‘DIP’ switches that could be set by the proprietor to change difficulty, lives, extras etc. These are emulated in MAME and can also be configured - Options (TAB), Dip Switches.
+
+DONT LIKE COMMAND LINE?
+The Advance Suite of software also includes a fully integrated Front End for AdvMAME, AdvMENU (Available Here - http://sourceforge.net/projects/advancemame/files/advancemenu/). A Front End is a G.U.I (Graphical User Interface) which elevates the troublesome Command Line typing for Emulator control and execution, this can also be helpful when your ROM collection gets larger as to prevent having to remember all the MAME codes (or what ROMS are in the Folder!). This can be installed using the exact same method as described above (Stage 1-7 ONLY Required!), then just run the executable advmenu. 

@@ -1,0 +1,156 @@
+A Pi and a cup of Java, please!
+Difficulty: medium
+
+ 
+You will need:
+- A Raspberry Pi with Raspbian.
+- 150 MB of free space in your SD card.
+- Basic knowledge of programming.
+- Basic command-line usage.
+
+Introduction
+
+In this article I'll show you how to write and run Java programs on your Raspberry Pi.
+
+Java is an object-oriented language designed to run in many operating systems without requiring   a recompilation of the source code. Java also provides a vast technology that offers solutions to more advanced problems like running complex web sites or high-end mission-critical algorithms. In this article I will focus on the very basics of the language. Once you master the language there are plenty of web sites on the Internet with loads of details of the technology and also full of examples.
+
+I'll first show you the steps to install Java on the Raspberry Pi. Then, we'll create a couple of basic Java programs... and we'll run them! 
+
+This article shows you the running examples first, and delves into concepts later. The idea behind it is that it will be easier for you to look at real java programs and try to identify the new elements and their functions by yourself. Once you write the program and run it, I will explain the novelties.
+
+1. Installation
+
+To write, compile and run your program, you'll need two things: a text editor, and a JDK.
+
+You can use any text editor to write a Java program. I prefer Geany because of its syntax coloring, but Leafpad or GEdit will work too.
+
+As a JDK I chose OpenJDK 7. A JDK includes (mainly) a compiler and a JVM. The compiler generates an executable program, and the JVM is able to run this program.
+
+To install Geany and OpenJDK 7 open a terminal window and type:
+
+  sudo apt-get install openjdk-7-jdk geany
+
+Type Y when asked to confirm. It's going to take at least 9 minutes to download and install everything, but it can take more depending on the speed of your internet connection.
+
+Once finished, check that both are correctly installed by making sure you can open Geany from the main menu inside "Programming"; to check OpenJDK7, open a terminal window and type:
+
+  java -version
+
+It must display a few lines starting with:
+
+  java version "1.7...
+  OpenJDK ...
+
+2. Running our first program
+
+Let's create a directory to store our programs. I chose a directory named "cupofjava", but you can choose any directory you want. Open a terminal and type:
+
+  mkdir cupofjava
+
+Now let's write our first program (a class). I'll call it "HiThere". Please know that java is an Object Oriented program and that every program is a class that in turn can use other classes.
+
+Open the text editor (Geany in my case) to create the file HiThere.java and save it in the directory we just created. Type (or copy) the following program in this file:
+
+public class HiThere {
+
+  public static void main(String[] args) {
+    System.out.println("A Java Pi!");
+  }
+
+}
+
+Let's now compile it. Using the terminal, go to the directory "cupofjava" (where you created the program) using:
+
+  cd cupofjava
+
+and type:
+
+  javac HiThere.java
+
+The javac command compiles java programs. It will analyse the source code you typed and will generate the executable program. After 15 seconds or so, this command should silently finish. If you misspelled something it will show an error message that will display where the problem is. If this is the case go back to the text editor, check your code and fix the misspelling, save the file, and try the command again until it doesn't show errors anymore. Once successfully compiled you'll find a new file in the same directory called HiThere.class. This is the compiled program that will be executed.
+
+Well, let's run our program now. On the terminal type:
+
+  java HiThere
+
+You don't need to specify the .class extension. Did you see the difference? The command javac compiles programs, and the command java executes them.
+
+The program will run and will display:
+
+  Hi there!
+
+Well... Congratulations! You have written and run your first Java program on the Raspberry Pi.
+
+You probably noticed the program took a few seconds to write that message. Why so slow? Actually, Java is quite fast. The whole program took only a couple of milliseconds to run, but Java needs a few seconds at the beginning to load the Java environment--the JVM. The good news is that once the JVM is loaded, the program runs very fast.
+
+Well, let's now look at the program in more detail. There's only one line in it that is actually executed. This line is:
+
+  System.out.println("A Java Pi!");
+
+The other lines specify the name of the class "HiThere" (in line 1), and the name of the method main in line 3. This class--as any other Java class--can have many methods but we are using only a single one in this example.
+
+Challenge #1: Your turn now: on the text editor change the message in between double quotes in the source file, from "A Java Pi!" to "My name is Name." (use your name) and save it. On the terminal compile the program again and run it using the two commands (javac and java) shown before. If you do it right, the program will display your name now. Do it!
+
+A note: The syntax of Java--that is, how to write a program--is very similar to the syntax of the C language. Any programmer with knowledge of C will find the basics of Java very easy to understand.
+
+3. Java variables and Control flow
+
+The next example illustrates the use of variables and control flow statements. On the same directory we stored the first program, let's now  create a second program called DiceRoller.java. Type it (or copy it) as shown below:
+
+import java.util.Random;
+
+public class DiceRoller {
+
+  public static void main(String[] args) {
+    Random generator = new Random();
+    int d = 0;
+
+    while (d < 4) {
+      System.out.print("Rolling... ");
+      int face = 1 + generator.nextInt(6);
+      System.out.print("I got a "+ face
+        + ".  ");
+      if (face == 1) {
+        System.out.print("Wow! An ACE!");
+      }
+      System.out.println();
+      d = d + 1;
+    }
+  }
+
+}
+
+Now, let's compile it. Type:
+
+  javac DiceRoller.java
+
+And let's run it. Type:
+
+  java DiceRoller
+
+You'll see something similar to:
+
+Rolling... I got a 2.
+Rolling... I got a 1.  Wow! An ACE!
+Rolling... I got a 4.
+Rolling... I got a 5.
+
+The program will roll four dice and will identify which ones are aces (the number 1). Do you see how it works?
+
+There are quite a few things of interest in this example. This program uses two integer variables named d, and face: the first one (d) is used to make sure we roll four times, not three times, not five times; the second one (face) stores the rolled die face on each turn.
+
+The program also receives an array of strings in the variable named args; this variable provides the command-line parameters you may type, but we are not using it in this example.
+
+Finally, the program also uses the variable generator, Remember I told you a Java class can use other classes? This is an example. This program uses an existing class (called Random) that specializes on generating random numbers. A class can be used by calling its methods. In this case we only use one of its methods--the one called nextInt()--to get a random number.
+
+Additionally, Java use of brackets { and } to define groups of instructions, called blocks. Each block can be empty, or have one or more instructions. You can define sub-blocks inside existing blocks as needed, commonly when you use control-flow statements.
+
+Talking about this... this example shows the use of two control-flow statements: if and while. An if statement executes a block only if the condition specified in parenthesis is true; a while, on the other hand, will execute the nested block multiple times as long as the condition is true. Other control blocks are for, do-while, switch, if-else.
+
+In the example, the if statement checks for the value of face. That's why the extra message appears only when an ace is rolled.
+
+The while statement, on the other hand, executes the included block four times, because it checks the value of the variable d is less than 4. That variable starts in zero and increases by one at the end of the block. Therefore the first four times (0, 1, 2, 3) the while succeeds, but on the fifth one (when it has the value 4) it fails.
+
+Challenge #2: Change the program to roll 7 dice, where each dice has 10 faces. Once you save your changes, go to the terminal compile the program again and run it using the two commands (javac and java) shown before. If you do it right, the program will now display show all seven dice. Go for it!
+
+
