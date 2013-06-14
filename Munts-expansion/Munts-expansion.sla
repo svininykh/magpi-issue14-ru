@@ -10,7 +10,7 @@
         <COLOR NAME="Black" CMYK="#000000ff" Spot="0" Register="0"/>
         <COLOR NAME="Blue" RGB="#0000ff" Spot="0" Register="0"/>
         <COLOR NAME="Cool Black" CMYK="#990000ff" Spot="0" Register="0"/>
-        <COLOR NAME="Cyan" CMYK="#ff000000" Spot="0" Register="0"/>
+        <COLOR NAME="Cyan" CMYK="#48c00808" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#000000" RGB="#000000" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#bc1241" RGB="#bc1241" Spot="0" Register="0"/>
         <COLOR NAME="FromSVG#cccccc" RGB="#cccccc" Spot="0" Register="0"/>
@@ -44,8 +44,12 @@
         <LAYERS NUMMER="6" LEVEL="11" NAME="Article_Text" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ffff00"/>
         <LAYERS NUMMER="11" LEVEL="2" NAME="Effect : Header_Fade 002" SICHTBAR="0" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ffff"/>
         <Printer firstUse="1" toFile="1" useAltPrintCommand="1" outputSeparations="0" useSpotColors="0" useColor="1" mirrorH="1" mirrorV="0" useICC="0" doGCR="1" doClip="1" setDevParam="0" useDocBleeds="0" cropMarks="1" bleedMarks="1" registrationMarks="0" colorMarks="0" includePDFMarks="1" PSLevel="3" PDLanguage="3" markOffset="3.74231782764791e-308" BleedTop="0" BleedLeft="0" BleedRight="0" BleedBottom="0" printer="" filename="" separationName="" printerCommand=""/>
-        <PDF firstUse="1" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="0" Quality="0" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="0" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="300" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="0" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
-            <LPI Color="" Frequency="0" Angle="0" SpotFunction="0"/>
+        <PDF firstUse="0" Thumbnails="0" Articles="0" Bookmarks="0" Compress="1" CMethod="1" Quality="2" MirrorH="0" MirrorV="0" Clip="0" RotateDeg="0" PresentMode="0" RecalcPic="1" Grayscale="0" RGBMode="1" UseProfiles="0" UseProfiles2="0" Binding="0" PicRes="600" Resolution="300" Version="14" Intent="1" Intent2="0" SolidP="CineonLog M " ImageP="CineonLog M " PrintP="Fogra27L CMYK Coated Press" InfoString="" BTop="0" BLeft="0" BRight="0" BBottom="0" useDocBleeds="0" cropMarks="0" bleedMarks="0" registrationMarks="0" colorMarks="0" docInfoMarks="0" markOffset="0" ImagePr="0" PassOwner="" PassUser="" Permissions="-4" Encrypt="0" UseLayers="0" UseLpi="0" UseSpotColors="1" doMultiFile="1" displayBookmarks="0" displayFullscreen="0" displayLayers="0" displayThumbs="0" hideMenuBar="0" hideToolBar="0" fitWindow="0" PageLayout="0" openAction="">
+            <Fonts Name="FreeSans Bold"/>
+            <Subset Name="FreeSans Regular"/>
+            <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+            <Effekte pageEffectDuration="1" pageViewDuration="1" effectType="0" Dm="0" M="0" Di="0"/>
+            <LPI Color="" Frequency="10" Angle="0" SpotFunction="0"/>
             <LPI Color="Black" Frequency="133" Angle="45" SpotFunction="3"/>
             <LPI Color="Cyan" Frequency="133" Angle="105" SpotFunction="3"/>
             <LPI Color="Magenta" Frequency="133" Angle="75" SpotFunction="3"/>
@@ -222,11 +226,14 @@
             <para PARENT="Body text"/>
             <ITEXT CH="The other capabilities of Linux are so compelling that attempts have been made from time to time to graft in real time support.  None of these have been particularly successful, at least in terms of “mind share”.  But fortunately there is another way: the I/O processor (Figure 1)."/>
             <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
             <ITEXT CH="Figure 1 -- I/O Processor"/>
+            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="An I/O processor is simply a separate computer dedicated to I/O operations, usually acting as a slave to the “main” or “real” processor.  The I/O processor runs its own software, separate from the main processor.  Depending on the implementation, the I/O processor software may or may not be alterable from the main processor."/>
             <para PARENT="Body text"/>
             <ITEXT CH="The I/O processor idea is not new.  The IBM 7094 mainframe computer of 1962 could use a 7044 computer for all I/O.  Processing was performed on the 7094 and I/O done on the 7044.  Even the original IBM PC, released in 1981, had an 8048 8-bit microcontroller in the keyboard to handle key press timing.  Today, the I/O processor idea has been pushed all the way down to single chip systems: The NXP LPC4300, itself a single chip ARM Cortex-M4 microcontroller, includes a separate ARM Cortex-M0 microcontroller, for real time processing, on the same chip."/>
+            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="The Raspberry Pi Model B offers three different I/O interfaces: Ethernet, USB, and the P1 expansion header.  A case can be made for attaching an I/O processor to any of the three interfaces.  Ethernet and USB offer good bandwidth and standard interfaces.  An I/O processor board built to attach to either Ethernet or USB would also be able to connect to any other Linux, Windows, or Mac computer.  But both Ethernet and USB impose significant cost and complexity penalties upon the I/O processor board.  It would be difficult (though not impossible) to design an I/O processor board, with USB or Ethernet, costing less than the Raspberry Pi itself."/>
             <para PARENT="Body text"/>
@@ -242,7 +249,12 @@
             <para PARENT="Body text"/>
             <ITEXT CH="Good support by free development tools.  ARM microcontrollers, including the LPC1114, are very well supported by binutils/gcc/newlib/gdb compiler toolchain."/>
             <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
             <ITEXT CH="Figure 2 -- Assembled Board"/>
+            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Some other Raspberry Pi expansion boards contain a microcontroller (usually an AVR) as an addition or afterthought.  The LPC1114 microcontroller is central to this board's design.  Even though it only contains one integrated circuit, an LED, and 8 resistors and capacitors, this board offers:"/>
             <para PARENT="Body text"/>
@@ -285,6 +297,14 @@
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="1" PTYPE="5" XPOS="91.4995275832598" YPOS="1715.43401576142" WIDTH="612.2834646" HEIGHT="1" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="5.669291339" PCOLOR="None" PCOLOR2="Cyan" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="1" LOCKR="1" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="0" POCOOR="" NUMCO="0" COCOOR="" NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="0" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="0" PTYPE="2" XPOS="369" YPOS="360.15874015748" WIDTH="297.935433070867" HEIGHT="85.8412598425197" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.6525" LOCALSCY="0.6525" LOCALX="-4.85256584306272" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="Figure1_IO_Processor.png" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 297.935 0 297.935 0 297.935 0 297.935 0 297.935 85.8413 297.935 85.8413 297.935 85.8413 297.935 85.8413 0 85.8413 0 85.8413 0 85.8413 0 85.8413 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 297.935 0 297.935 0 297.935 0 297.935 0 297.935 85.8413 297.935 85.8413 297.935 85.8413 297.935 85.8413 0 85.8413 0 85.8413 0 85.8413 0 85.8413 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="2" XPOS="411" YPOS="955.748976377953" WIDTH="255.935433070867" HEIGHT="244.416377952755" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.0953915143760218" LOCALSCY="0.0953915143760218" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="0" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="Figure2_AssembledBoard.jpg" PFILE2="" PFILE3="" PRFILE="Embedded sRGB IEC61966-2.1" EPROF="Embedded sRGB IEC61966-2.1" IRENDER="0" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 244.416 255.935 244.416 255.935 244.416 255.935 244.416 0 244.416 0 244.416 0 244.416 0 244.416 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 244.416 255.935 244.416 255.935 244.416 255.935 244.416 0 244.416 0 244.416 0 244.416 0 244.416 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
