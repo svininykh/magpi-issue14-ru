@@ -14,4 +14,63 @@ The day is for technology enthusiasts, entrepreneurs, geeks, hackers, coders, de
 
 ----------
 
+ July 13, 2013 Raspberry Pi Meet-up
 
+When:  07/13/2013 11:00 AM
+Where:  Lima Public Library, 650 W Market St, Lima, OH
+
+What is a Raspberry Pi?
+
+LRITA.org and the Lima LUG will be hosting a Raspberry Pi user group meet-up
+on Saturday, July 13, at the Lima Public Library.
+
+ “The Raspberry Pi is a credit-card sized computer that plugs into your TV and
+a keyboard. It’s a capable little PC which can be used for many things.” The
+Pi has found its way into some amazing DIY projects.
+
+This event is a great opportunity to meet with other RPi users in the area to
+share ideas and projects. And if RPi is new to you, come learn what the RPi is
+all about!
+
+If you do not have a RPi, you might even win one! Thanks to LRITA.org, we will
+be giving away (3) 512MB RPi Model B Rev. 2 boards.
+
+Attendees will receive an LRITA.org flash drive and a pizza lunch.
+
+Registration is FREE! Please register below.
+
+http://www.lrita.org/events/bit-talk/july-13,-2013-raspberry-pi-meet-up.aspx
+
+----------
+
+
+Digital Design Studio, Level 1. 15 Science Centre Road. Singapore 609081
+13 July 2013
+2:00 pm - 4:30 pm
+
+If you are a member of the Science Centre, admission is free. Please indicate
+your membership number in the registration form in the "Comment" section.
+
+If you are not a member, there will be an admission fee of S$10.00 for
+admission into the Science Centre.
+
+http://www.itsc.org.sg/index.php?option=com_eventbooking&task=view_event&event_id=74&Itemid=41
+
+----------
+
+Liverpool Raspberry Jam #RJam #RJamLPL, Saturday 6th July 2013
+http://raspberryjam.org.uk/event/liverpool-raspberry-jam-rjam-rjamlpl-saturday-6th-july-2013/
+    120 Heyworth St, Liverpool, Mersyd, L5 0SQ, United Kingdom	
+North Liverpool Academy 
+Start:
+    July 6, 2013 9:30 am
+End:
+    July 6, 2013 4:00 pm
+
+--------
+
+http://www.raspi-greenville.org/
+PRE-PI FOR EVERYBODY
+(4 hour class, 15 min breaks hourly, 30 minute lunch)
+June 13th & 20th
+3300 Poinsett Highway, Greenville, SC, 29613
