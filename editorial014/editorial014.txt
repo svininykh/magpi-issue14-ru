@@ -1,0 +1,17 @@
+
+Welcome to the 14th issue of The MagPi - another fully loaded guide to all things Raspberry Pi!
+
+This month we begin our journey in introducing the newest module in the Raspberry Pi world, the camera, with a great guide written by
+James Hughes on setup and basic operation.  The conclusion of this article will be found in next month's edition where James builds on these 
+foundations with hints and tips on advanced usage.
+
+We reload the Matrix with part two of the interesting Pi Matrix article, take a look at the Gunzunty board and review the ever popular South West Raspberry 
+Pi Boot Camps.
+
+We bring you more on the programming languages Charm, Scratch and Python plus bring you the first MagPi article on the popular language of Java.
+
+I am pleased to write that the MagPi Kickstarter bundles are now shipping and we will soon have individual issues coming to print.  We hope you enjoy the 
+printed editions and thank you again for your support and patience in helping make the dream a reality.
+
+
+Ash Stone
