@@ -264,13 +264,28 @@
             <para PARENT="Body text"/>
             <ITEXT CH="Selection"/>
             <para PARENT="Body title"/>
-            <ITEXT CH="Often programs want to take different courses of action under different conditions and this is handled by selection which in Charm is provided by the #if# and #case# keywords."/>
+            <ITEXT CH="Often programs want to take different courses of action under different conditions and this is handled by selection which in Charm is provided by the "/>
+            <ITEXT FONT="Monaco Regular" CH="if"/>
+            <ITEXT CH=" and "/>
+            <ITEXT FONT="Monaco Regular" CH="case"/>
+            <ITEXT CH=" keywords."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="#if# checks whether the following conditional expression evaluates to #true# in which case the next statement, or block of statements enclosed in curly brackets is executed, or #false# in which case it is not."/>
+            <ITEXT FONT="Monaco Regular" CH="if"/>
+            <ITEXT CH=" checks whether the following conditional expression evaluates to "/>
+            <ITEXT FONT="Monaco Regular" CH="true"/>
+            <ITEXT CH=" in which case the next statement, or block of statements enclosed in curly brackets is executed, or "/>
+            <ITEXT FONT="Monaco Regular" CH="false"/>
+            <ITEXT CH=" in which case it is not."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The #if# keyword has an optional associated #else# keyword which if present introduces the statement or statements that should be executed if the boolean expression is not #true# e.g."/>
+            <ITEXT CH="The "/>
+            <ITEXT FONT="Monaco Regular" CH="if"/>
+            <ITEXT CH=" keyword has an optional associated "/>
+            <ITEXT FONT="Monaco Regular" CH="else"/>
+            <ITEXT CH=" keyword which if present introduces the statement or statements that should be executed if the boolean expression is not "/>
+            <ITEXT FONT="Monaco Regular" CH="true"/>
+            <ITEXT CH=" e.g."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="   if x = 1"/>
@@ -285,7 +300,9 @@
             <ITEXT CH="Note the use of indentation to help highlight the flow of control logic."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The #case# keyword introduces a series of clauses that match the value of an integer variable against a number of possible constant values and chooses a block of code to execute e.g."/>
+            <ITEXT CH="The "/>
+            <ITEXT FONT="Monaco Regular" CH="case"/>
+            <ITEXT CH=" keyword introduces a series of clauses that match the value of an integer variable against a number of possible constant values and chooses a block of code to execute e.g."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="       case x"/>
@@ -303,32 +320,42 @@
             <ITEXT CH="       }"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Note the use of the #otherwise# clause to catch any values that do not match."/>
+            <ITEXT CH="Note the use of the "/>
+            <ITEXT FONT="Monaco Regular" CH="otherwise"/>
+            <ITEXT CH=" clause to catch any values that do not match."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Iteration"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Sometimes the same code needs to be executed many times within a loop, often to process each member of an array. This is handled by iteration using the #while#, #repeat# and #for# keywords."/>
+            <ITEXT CH="Sometimes the same code needs to be executed many times within a loop, often to process each member of an array. This is handled by iteration using the "/>
+            <ITEXT FONT="Monaco Regular" CH="while"/>
+            <ITEXT CH=", "/>
+            <ITEXT FONT="Monaco Regular" CH="repeat"/>
+            <ITEXT CH=" and "/>
+            <ITEXT FONT="Monaco Regular" CH="for"/>
+            <ITEXT CH=" keywords."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="#while# checks whether the following conditional expression evaluates to true in which case the next statement, or block of statements enclosed in curly brackets are executed until the expression evaluates to false e.g."/>
+            <ITEXT FONT="Monaco Regular" CH="while"/>
+            <ITEXT CH=" checks whether the following conditional expression evaluates to true in which case the next statement, or block of statements enclosed in curly brackets are executed until the expression evaluates to false e.g."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="   while true loop ();"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="#repeat# is similar to while but the conditional expression is at the end of the loop and must evaluate to #false# for the loop to be repeated e.g."/>
+            <ITEXT FONT="Monaco Regular" CH="repeat"/>
+            <ITEXT CH=" is similar to while but the conditional expression is at the end of the loop and must evaluate to "/>
+            <ITEXT FONT="Monaco Regular" CH="false"/>
+            <ITEXT CH=" for the loop to be repeated e.g."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="   repeat loop (); false;"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="#for# allows a control variable to be initialised, incremented and tested all in one statement e.g."/>
             <para PARENT="Body text"/>
-            <para PARENT="Body text"/>
-            <ITEXT CH="   for (int i := 0 step i := i + 1 while i &lt; 10) a[i] := 0;"/>
-            <para PARENT="Code"/>
+            <ITEXT FONT="Monaco Regular" CH="for"/>
+            <ITEXT CH=" allows a control variable to be initialised, incremented and tested all in one statement e.g."/>
             <para PARENT="Body text"/>
             <ITEXT CH="initialises the contents of an integer array of size 10 to 0."/>
             <para PARENT="Body text"/>
@@ -366,18 +393,20 @@
             <ITEXT CH="   not A - A must be false"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
+            <para PARENT="Body text"/>
             <ITEXT CH="nil"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="The #nil# keyword occupies a special place in the Charm language and can be used to initialise and test pointers (ref variables). It indicates that the pointer is not currently setup to point anywhere, and an attempt to use it will result in an exception that stops program execution."/>
+            <ITEXT CH="The "/>
+            <ITEXT FONT="Monaco Regular" CH="nil"/>
+            <ITEXT CH=" keyword occupies a special place in the Charm language and can be used to initialise and test pointers (ref variables). It indicates that the pointer is not currently setup to point anywhere, and an attempt to use it will result in an exception that stops program execution."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Tree recursion"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
             <ITEXT CH="The following program uses tree recursion and the language constructs to draw a tree on the screen"/>
-            <para PARENT="Body text"/>
-            <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="To make the tree look more realistic some branch parameters have been randomised, for example their length and the angle between them."/>
@@ -571,7 +600,7 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="410.5" YPOS="1242.03543307086" WIDTH="255.093185701102" HEIGHT="43" RADRECT="8.503937008" FRTYPE="2" CLIPEDIT="0" PWIDTH="1" PCOLOR="Deep Orange" PCOLOR2="Deep Orange" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="32" POCOOR="8.50394 0 8.50394 0 246.589 0 246.589 0 246.589 0 251.286 0 255.093 8.50394 255.093 3.80734 255.093 8.50394 255.093 8.50394 255.093 34.4961 255.093 34.4961 255.093 34.4961 255.093 39.1927 246.589 43 251.286 43 246.589 43 246.589 43 8.50394 43 8.50394 43 8.50394 43 3.80734 43 0 34.4961 0 39.1927 0 34.4961 0 34.4961 0 8.50394 0 8.50394 0 8.50394 0 3.80734 8.50394 0 3.80734 0 " NUMCO="32" COCOOR="8.50394 0 8.50394 0 246.589 0 246.589 0 246.589 0 251.286 0 255.093 8.50394 255.093 3.80734 255.093 8.50394 255.093 8.50394 255.093 34.4961 255.093 34.4961 255.093 34.4961 255.093 39.1927 246.589 43 251.286 43 246.589 43 246.589 43 8.50394 43 8.50394 43 8.50394 43 3.80734 43 0 34.4961 0 39.1927 0 34.4961 0 34.4961 0 8.50394 0 8.50394 0 8.50394 0 3.80734 8.50394 0 3.80734 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="1" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="13" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="352.5" YPOS="1259.00393700787" WIDTH="313.093185701102" HEIGHT="27" RADRECT="8.503937008" FRTYPE="2" CLIPEDIT="0" PWIDTH="1" PCOLOR="Deep Orange" PCOLOR2="Deep Orange" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="32" POCOOR="8.50394 0 8.50394 0 304.589 0 304.589 0 304.589 0 309.286 0 313.093 8.50394 313.093 3.80734 313.093 8.50394 313.093 8.50394 313.093 18.4961 313.093 18.4961 313.093 18.4961 313.093 23.1927 304.589 27 309.286 27 304.589 27 304.589 27 8.50394 27 8.50394 27 8.50394 27 3.80734 27 0 18.4961 0 23.1927 0 18.4961 0 18.4961 0 8.50394 0 8.50394 0 8.50394 0 3.80734 8.50394 0 3.80734 0 " NUMCO="32" COCOOR="8.50394 0 8.50394 0 304.589 0 304.589 0 304.589 0 309.286 0 313.093 8.50394 313.093 3.80734 313.093 8.50394 313.093 8.50394 313.093 18.4961 313.093 18.4961 313.093 18.4961 313.093 23.1927 304.589 27 309.286 27 304.589 27 304.589 27 8.50394 27 8.50394 27 8.50394 27 3.80734 27 0 18.4961 0 23.1927 0 18.4961 0 18.4961 0 8.50394 0 8.50394 0 8.50394 0 3.80734 8.50394 0 3.80734 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="1" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="13" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -633,7 +662,7 @@
             <trail ALIGN="1"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="2" PTYPE="2" XPOS="410.282519670867" YPOS="1821.15748031496" WIDTH="256.6529134" HEIGHT="183.338582677166" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.3375" LOCALSCY="0.3375" LOCALX="41.994750656168" LOCALY="-14.4461942257218" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="tree.PNG" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.653 0 256.653 0 256.653 0 256.653 0 256.653 183.339 256.653 183.339 256.653 183.339 256.653 183.339 0 183.339 0 183.339 0 183.339 0 183.339 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.653 0 256.653 0 256.653 0 256.653 0 256.653 183.339 256.653 183.339 256.653 183.339 256.653 183.339 0 183.339 0 183.339 0 183.339 0 183.339 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="2" PTYPE="2" XPOS="411" YPOS="1821.15748031496" WIDTH="255.935433070867" HEIGHT="171.84251968504" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="0.3375" LOCALSCY="0.3375" LOCALX="39.8688830142924" LOCALY="-14.4461942257218" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="tree.PNG" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="0" EMBEDDED="0" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 171.843 255.935 171.843 255.935 171.843 255.935 171.843 0 171.843 0 171.843 0 171.843 0 171.843 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 255.935 0 255.935 0 255.935 0 255.935 0 255.935 171.843 255.935 171.843 255.935 171.843 255.935 171.843 0 171.843 0 171.843 0 171.843 0 171.843 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -682,6 +711,15 @@
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="3" PTYPE="6" XPOS="654.28409452126" YPOS="3468.44125979921" WIDTH="36.8503937" HEIGHT="36.8503937" RADRECT="0" FRTYPE="1" CLIPEDIT="1" PWIDTH="1.417322835" PCOLOR="Cyan" PCOLOR2="20% Gray" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="1" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="36.8504 18.4252 36.8504 28.6015 18.4252 36.8504 28.6015 36.8504 18.4252 36.8504 8.24924 36.8504 0 18.4252 0 28.6015 0 18.4252 0 8.24924 18.4252 0 8.24924 0 18.4252 0 28.6015 0 36.8504 18.4252 36.8504 8.24924 " NUMCO="16" COCOOR="36.8504 18.4252 36.8504 28.6015 18.4252 36.8504 28.6015 36.8504 18.4252 36.8504 8.24924 36.8504 0 18.4252 0 28.6015 0 18.4252 0 8.24924 18.4252 0 8.24924 0 18.4252 0 28.6015 0 36.8504 18.4252 36.8504 8.24924 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="8" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="6" XPOS="345" YPOS="1257" WIDTH="321.935433070867" HEIGHT="35" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 321.935 0 321.935 0 321.935 0 321.935 0 321.935 35 321.935 35 321.935 35 321.935 35 0 35 0 35 0 35 0 35 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 321.935 0 321.935 0 321.935 0 321.935 0 321.935 35 321.935 35 321.935 35 321.935 35 0 35 0 35 0 35 0 35 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <trail/>
+            <PageItemAttributes/>
+        </PAGEOBJECT>
+        <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="361" YPOS="1266.51181102362" WIDTH="305.935433070867" HEIGHT="19" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 305.935 0 305.935 0 305.935 0 305.935 0 305.935 19 305.935 19 305.935 19 305.935 19 0 19 0 19 0 19 0 19 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 305.935 0 305.935 0 305.935 0 305.935 0 305.935 19 305.935 19 305.935 19 305.935 19 0 19 0 19 0 19 0 19 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+            <ITEXT CH="for (int i := 0 step i := i + 1 while i &lt; 10) a[i] := 0;"/>
+            <trail PARENT="Code"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
     </DOCUMENT>
