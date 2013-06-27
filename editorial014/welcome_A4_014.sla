@@ -96,10 +96,7 @@
             <ITEXT FONT="FreeSans Bold" CH="Colin Deady"/>
             <ITEXT CH=" - Layout / Proof Reading"/>
             <para LINESP="13"/>
-            <ITEXT FONT="FreeSans Bold" CH="Jason 'Jaseman' Davies"/>
-            <ITEXT CH=" - Website"/>
-            <para LINESP="13"/>
-            <ITEXT FONT="FreeSans Bold" CH="Matt '0ther0judge0'"/>
+            <ITEXT FONT="FreeSans Bold" CH="Matt Judge"/>
             <ITEXT CH=" - Website / Administration"/>
             <para LINESP="13"/>
             <ITEXT FONT="FreeSans Bold" CH="Meltwater"/>
