@@ -148,7 +148,7 @@
             <para ALIGN="2" LINESP="30"/>
             <ITEXT FEATURES="inherit shadowed" FCOLOR="Yellow" CH="Bootcamp report"/>
             <para ALIGN="2" LINESP="30"/>
-            <ITEXT FONT="Nimbus Sans L Bold Condensed" FONTSIZE="22" FEATURES="inherit shadowed" FCOLOR="Yellow" FSHADE="40" SCOLOR="Black" SSHADE="100" TXTSHX="7" TXTSHY="-7" CH="LED Matrix"/>
+            <ITEXT FONT="Nimbus Sans L Bold Condensed" FONTSIZE="22" FEATURES="inherit shadowed" FCOLOR="Yellow" FSHADE="40" SCOLOR="Black" SSHADE="100" TXTSHX="7" TXTSHY="-7" CH="LED matrix"/>
             <para ALIGN="2" LINESP="30"/>
             <ITEXT FONT="Nimbus Sans L Bold Condensed" FONTSIZE="22" FEATURES="inherit shadowed" FCOLOR="Yellow" FSHADE="40" SCOLOR="Black" SSHADE="100" TXTSHX="7" TXTSHY="-7" CH="Charm"/>
             <para ALIGN="2" LINESP="30"/>
