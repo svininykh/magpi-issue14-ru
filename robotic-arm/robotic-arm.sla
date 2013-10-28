@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SCRIBUSUTF8NEW Version="1.4.2">
-    <DOCUMENT ANZPAGES="3" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" BORDERLEFT="28.3464566929134" BORDERRIGHT="28.3464566929134" BORDERTOP="28.3464566929134" BORDERBOTTOM="28.3464566929134" PRESET="0" BleedTop="8.50393700787402" BleedLeft="8.50393700787402" BleedRight="8.50393700787402" BleedBottom="8.50393700787402" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="3.881" UNITS="1" DFONT="Bitstream Charter Bold" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="3" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="CineonLog M " DPPr="Fogra27L CMYK Coated Press" DPIn="CineonLog M " DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="CineonLog M " DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="12" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="1" SnapToGuides="1" SnapToGrid="0" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWLAYERM="1" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.019" dispY="0.019" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="0" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
+<SCRIBUSUTF8NEW Version="1.4.1.svn">
+    <DOCUMENT ANZPAGES="3" PAGEWIDTH="595.275590551181" PAGEHEIGHT="841.889763779528" BORDERLEFT="28.3464566929134" BORDERRIGHT="28.3464566929134" BORDERTOP="28.3464566929134" BORDERBOTTOM="28.3464566929134" PRESET="0" BleedTop="8.50393700787402" BleedLeft="8.50393700787402" BleedRight="8.50393700787402" BleedBottom="8.50393700787402" ORIENTATION="0" PAGESIZE="A4" FIRSTNUM="1" BOOK="0" AUTOSPALTEN="1" ABSTSPALTEN="3.881" UNITS="1" DFONT="Bitstream Charter Bold" DSIZE="12" DCOL="1" DGAP="0" TabFill="" TabWidth="36" AUTHOR="" COMMENTS="" KEYWORDS="" PUBLISHER="" DOCDATE="" DOCTYPE="" DOCFORMAT="" DOCIDENT="" DOCSOURCE="" DOCLANGINFO="" DOCRELATION="" DOCCOVER="" DOCRIGHTS="" DOCCONTRIB="" TITLE="" SUBJECT="" VHOCH="33" VHOCHSC="66" VTIEF="33" VTIEFSC="66" VKAPIT="75" BASEGRID="14.4" BASEO="0" AUTOL="20" UnderlinePos="-1" UnderlineWidth="-1" StrikeThruPos="-1" StrikeThruWidth="-1" GROUPC="3" HCMS="0" DPSo="0" DPSFo="0" DPuse="0" DPgam="0" DPbla="1" DPMo="CineonLog M " DPPr="Fogra27L CMYK Coated Press" DPIn="CineonLog M " DPInCMYK="Fogra27L CMYK Coated Press" DPIn2="CineonLog M " DPIn3="Fogra27L CMYK Coated Press" DISc="1" DIIm="0" ALAYER="6" LANGUAGE="English" MINWORDLEN="3" HYCOUNT="2" AUTOMATIC="1" AUTOCHECK="0" GUIDELOCK="1" SnapToGuides="1" SnapToGrid="0" MINGRID="20.0012598425197" MAJGRID="100.00062992126" SHOWGRID="0" SHOWGUIDES="1" showcolborders="1" SHOWFRAME="1" SHOWLAYERM="1" SHOWMARGIN="1" SHOWBASE="0" SHOWPICT="1" SHOWControl="0" SHOWLINK="0" rulerMode="1" showrulers="1" showBleed="1" rulerXoffset="0" rulerYoffset="0" GuideRad="10" GRAB="4" POLYC="4" POLYF="0.707106781186548" POLYR="0" POLYCUR="0" POLYFD="0" POLYS="0" AutoSave="1" AutoSaveTime="600000" ScratchBottom="20.0012598425197" ScratchLeft="100.00062992126" ScratchRight="100.00062992126" ScratchTop="20.0012598425197" GapHorizontal="0" GapVertical="39.9996850393701" StartArrow="0" EndArrow="0" PEN="Black" BRUSH="None" PENLINE="Black" PENTEXT="Black" StrokeText="Black" TextBackGround="None" TextLineColor="None" TextBackGroundShade="100" TextLineShade="100" TextPenShade="100" TextStrokeShade="100" STIL="1" STILLINE="1" WIDTH="1" WIDTHLINE="1" PENSHADE="100" LINESHADE="100" BRUSHSHADE="100" MAGMIN="10" MAGMAX="3200" MAGSTEP="200" CPICT="None" PICTSHADE="100" PICTSCX="1" PICTSCY="1" PSCALE="1" PASPECT="1" EmbeddedPath="0" HalfRes="1" dispX="0.019" dispY="0.019" constrain="15" MINORC="#00ff00" MAJORC="#00ff00" GuideC="#000080" BaseC="#c0c0c0" GuideZ="10" BACKG="0" PAGEC="#ffffff" MARGC="#0000ff" RANDF="0" currentProfile="PostScript">
         <CheckProfile Name="PDF 1.3" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="1" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.4" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
         <CheckProfile Name="PDF 1.5" ignoreErrors="0" autoCheck="1" checkGlyphs="1" checkOrphans="1" checkOverflow="1" checkPictures="1" checkResolution="1" checkTransparency="0" minResolution="144" maxResolution="2400" checkAnnotations="0" checkRasterPDF="1" checkForGIF="1" ignoreOffLayers="0" checkOffConflictLayers="0"/>
@@ -31,7 +31,7 @@
         <STYLE NAME="TOC_Title_Style" FONT="FreeSans Bold" LANGUAGE="English"/>
         <STYLE NAME="Body text" ALIGN="3" LINESP="15" FONTSIZE="12" LANGUAGE="English"/>
         <STYLE NAME="Code" LINESP="12" FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Black" LANGUAGE="English"/>
-        <STYLE NAME="Body title" FONT="FreeSans Bold" FONTSIZE="14" FEATURES="underline" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
+        <STYLE NAME="Body title" FONT="FreeSans Bold" FONTSIZE="14" FEATURES="" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" LANGUAGE="English"/>
         <CHARSTYLE CNAME="Default Character Style" DefaultStyle="1" FONT="FreeSans Regular" FONTSIZE="12" FEATURES="inherit" FCOLOR="Black" FSHADE="100" SCOLOR="Black" SSHADE="100" TXTSHX="5" TXTSHY="-5" TXTOUT="1" TXTULP="-0.1" TXTULW="-0.1" TXTSTP="-0.1" TXTSTW="-0.1" SCALEH="100" SCALEV="100" BASEO="0" KERN="0" LANGUAGE="English"/>
         <LAYERS NUMMER="1" LEVEL="0" NAME="Header" SICHTBAR="1" DRUCKEN="1" EDIT="1" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#ff0000"/>
         <LAYERS NUMMER="9" LEVEL="3" NAME="Effect:Header_bottom_bar" SICHTBAR="1" DRUCKEN="1" EDIT="0" FLOW="1" TRANS="1" BLEND="0" OUTL="0" LAYERC="#00ff00"/>
@@ -152,7 +152,7 @@
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="110.2869476991" YPOS="308.424842519685" WIDTH="236.417952755906" HEIGHT="16.7244094488189" RADRECT="0" FRTYPE="0" CLIPEDIT="1" PWIDTH="1.04567289830735" PCOLOR="None" PCOLOR2="None" TXTFILL="White" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="FreeSans Bold" ISIZE="15" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 236.418 0 236.418 0 236.418 0 236.418 0 236.418 16.7244 236.418 16.7244 236.418 16.7244 236.418 16.7244 0 16.7244 0 16.7244 0 16.7244 0 16.7244 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 236.418 0 236.418 0 236.418 0 236.418 0 236.418 16.7244 236.418 16.7244 236.418 16.7244 236.418 16.7244 0 16.7244 0 16.7244 0 16.7244 0 16.7244 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="12.4007818281801" gYpos="9.48980314960596" gWidth="289.12478516815" gHeight="35.704" ALIGN="1" LAYER="2" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT FONT="FreeSans Bold" FONTSIZE="15" FCOLOR="White" CH="DIFFICULTY : BEGINNER"/>
+            <ITEXT FONT="FreeSans Bold" FONTSIZE="15" FCOLOR="White" CH="SKILL LEVEL : BEGINNER"/>
             <trail ALIGN="1"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -198,7 +198,7 @@
             <trail ALIGN="1"/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="128.347086614173" YPOS="229.338582677165" WIDTH="381.977086614173" HEIGHT="77.25" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="FreeSans Bold" ISIZE="25" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 381.977 0 381.977 0 381.977 0 381.977 0 381.977 77.25 381.977 77.25 381.977 77.25 381.977 77.25 0 77.25 0 77.25 0 77.25 0 77.25 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 381.977 0 381.977 0 381.977 0 381.977 0 381.977 77.25 381.977 77.25 381.977 77.25 381.977 77.25 0 77.25 0 77.25 0 77.25 0 77.25 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="5" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="4" XPOS="128.347086614173" YPOS="237.842519685039" WIDTH="381.977086614173" HEIGHT="77.25" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" IFONT="FreeSans Bold" ISIZE="25" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 381.977 0 381.977 0 381.977 0 381.977 0 381.977 77.25 381.977 77.25 381.977 77.25 381.977 77.25 0 77.25 0 77.25 0 77.25 0 77.25 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 381.977 0 381.977 0 381.977 0 381.977 0 381.977 77.25 381.977 77.25 381.977 77.25 381.977 77.25 0 77.25 0 77.25 0 77.25 0 77.25 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="5" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <ITEXT FONT="FreeSans Bold" FONTSIZE="23" CH="Controlling the Maplin/OWIrobot robotic arm"/>
             <trail LINESP="24"/>
             <PageItemAttributes/>
@@ -226,8 +226,7 @@
             <para PARENT="Body text"/>
             <ITEXT CH=" sudo usermod -aG plugdev pi"/>
             <para PARENT="Code"/>
-            <para PARENT="Body text"/>
-            <ITEXT CH="The next step is to add a udev rule to allow the 'pi' user to send commands to the arm. To do this, create a file called /etc/udev/rules.d/85-robotarm.rules, using the command:"/>
+            <ITEXT CH="The next step is to add a udev rule to allow the 'pi' user to send commands to the arm. To do this, create a file called /etc/udev/rules.d/85-robotarm.rules using the command,"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH=" sudo nano /etc/udev/rules.d/85-robotarm.rules"/>
@@ -236,10 +235,14 @@
             <ITEXT CH="with the contents below:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;1267&quot;, ATTRS{idProduct}==&quot;0000&quot;, ACTION==&quot;add&quot;, GROUP=&quot;plugdev&quot;, MODE=&quot;0666&quot;"/>
+            <ITEXT CH=" SUBSYSTEM==&quot;usb&quot;, ATTRS{idVendor}==&quot;1267&quot;, "/>
+            <para PARENT="Code"/>
+            <ITEXT CH=" ATTRS{idProduct}==&quot;0000&quot;, ACTION==&quot;add&quot;,  "/>
+            <para PARENT="Code"/>
+            <ITEXT CH=" GROUP=&quot;plugdev&quot;, MODE=&quot;0666&quot;"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="To save the file, press ctrl-x and then press ‘Y’ followed by Enter."/>
+            <ITEXT CH="To save the file, press Ctrl-x and then press ‘Y’ followed by Enter."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="You’ll then need to install the Python USB libraries. I found that the one from the Apt repository was slightly out of date, so I had to install the Apt version first and then upgrade it using the pip command. The command below will do this:"/>
@@ -253,6 +256,7 @@
             <ITEXT CH="When the Python USB libraries have been installed, reboot your Raspberry Pi so that the changes to udev and the 'pi' user account take effect with the command:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
+            <para PARENT="Code"/>
             <ITEXT CH=" sudo shutdown -r now"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
@@ -268,7 +272,9 @@
             <ITEXT CH="If the arm has been detected successfully you should see output similar to the line below:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" [  252.790554] usb 1-1.3: New USB device found, idVendor=1267, idProduct=0000"/>
+            <ITEXT CH=" [  252.790554] usb 1-1.3: New USB device "/>
+            <para PARENT="Code"/>
+            <ITEXT CH=" found, idVendor=1267, idProduct=0000"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <ITEXT CH="If you don’t see the result above, turn off the arm using the power switch, unplug from the USB port, plug the arm back in and turn the power back on."/>
@@ -288,10 +294,12 @@
             <ITEXT CH=" sudo apt-get install git-core"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="When you have the Git client installed, run the command: "/>
+            <ITEXT CH="When you have the Git client installed, run the command, "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH=" git clone https://github.com/peterlavelle/maplinarm"/>
+            <ITEXT CH=" git clone https://github.com/peterlavelle/ "/>
+            <para PARENT="Code"/>
+            <ITEXT CH=" maplinarm"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <ITEXT CH="to pull down a copy of the Python code. This command will clone the repository into a subdirectory called ‘maplinarm’ and should pull down the files listed below:"/>
@@ -301,23 +309,33 @@
             <para PARENT="Code"/>
             <ITEXT FONTSIZE="9" CH=" ls"/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="9" CH=" commander.py  commands.csv  maplinrobot.py   README.md"/>
+            <ITEXT FONTSIZE="9" CH=" commander.py  commands.csv  maplinrobot.py "/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="9" CH=" README.md"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
             <para PARENT="Body title"/>
             <ITEXT CH="Making the scripts executable"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Now we need to make the scripts executable by the Raspberry Pi. To do this, change into the directory you cloned the repository down to using the cd command and run the command chmod 755 *.py This will give all files ending in ‘.py’ executable permissions. You can double-check this with the command ls -la *.py and looking for the ‘x’ in the left-hand column of the output on each line. See example listing below:"/>
+            <ITEXT CH="Now we need to make the scripts executable by the Raspberry Pi. To do this, change into the directory you cloned the repository down to using the "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="cd"/>
+            <ITEXT CH=" command and run the command "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="chmod 755 *.py"/>
+            <ITEXT CH=". This will  give all files  ending  in ‘.py’ executable permissions. You can double-check this with the command "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="ls -la *.py"/>
+            <ITEXT CH=" and looking for the ‘x’ in the left-hand column of the output on each line. See example listing below:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH="Programming the arm"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Ok, now on to the good part. The script commander.py will read in commands from a CSV file passed to it as an argument. "/>
+            <ITEXT CH="Ok, now on to the good part. The script "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="commander.py"/>
+            <ITEXT CH=" will read in commands from a CSV file passed to it as an argument. "/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="There is an example file called ‘commands.csv’ in the Git repository to help you get started. So lets open this file up and take a look with the command:"/>
+            <ITEXT CH="There is an example file called ‘commands.csv’ in the Git repository to help you get started. So let's open this file up and take a look with the command:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT CH=" nano commands.csv "/>
@@ -353,79 +371,82 @@
             <ITEXT CH=" command,duration,pause"/>
             <para PARENT="Code"/>
             <para PARENT="Body text"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="command"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="command"/>
             <ITEXT FONTSIZE="9" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="any valid command found in the maplinrobot.py script"/>
             <para PARENT="Body text" ALIGN="3"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="duration"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="duration"/>
             <ITEXT FONTSIZE="9" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="the time in seconds to execute the command for. Make sure all values are entered to two decimal places. e.g, for 1 second specify a value of 1.00 here."/>
             <para PARENT="Body text" ALIGN="3"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="pause"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="pause"/>
             <ITEXT FONTSIZE="9" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="the time in seconds to wait before executing the next command in the   sequence.  Make sure all values are entered to two decimal places. e.g, for 1 second specify a value of 1.00 here."/>
             <para PARENT="Body text" ALIGN="3"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="12" CH="The commander.py script will execute each line in the CSV file as a separate command for the duration you set and will wait for the number of seconds set in the pause value before moving on to the next command in the sequence."/>
+            <ITEXT FONTSIZE="12" CH="The "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="commander.py"/>
+            <ITEXT FONTSIZE="12" CH=" script will execute each line in the CSV file as a separate command for the duration you set and will wait for the number of seconds set in the pause value before moving on to the next command in the sequence."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="12" CH="Valid commands and a description for each can be found below:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="base-anti-clockwise"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="base-anti-clockwise"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Rotates the base anti-clockwise"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="base-clockwise"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="base-clockwise"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Rotates the base clockwise"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="shoulder-up"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="shoulder-up"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Raises the shoulder"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="shoulder-down"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="shoulder-down"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Lowers the shoulder"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="elbow-up"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="elbow-up"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Raises the elbow"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="elbow-down"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="elbow-down"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" -"/>
+            <ITEXT FONTSIZE="9" CH=" "/>
             <ITEXT FONTSIZE="12" CH="Lowers the elbow"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="wrist-up"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="wrist-up"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Raises the wrist"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="wrist-down"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="wrist-down"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Lowers the wrist"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="grip-open"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="grip-open"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Opens the grip"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="grip-close"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="grip-close"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Closes the grip"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="light-on"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="light-on"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Turns on the LED in the grip"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="light-off"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="light-off"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Turns the LED in the grip off"/>
             <para PARENT="Body text" ALIGN="0"/>
-            <ITEXT FONT="Monaco Regular" FONTSIZE="9" FCOLOR="Dark green" FSHADE="100" CH="stop"/>
-            <ITEXT FONTSIZE="9" CH=" - "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" FCOLOR="Dark green" FSHADE="100" CH="stop"/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH=" - "/>
             <ITEXT FONTSIZE="12" CH="Stops all movement of the arm"/>
             <para PARENT="Body text" ALIGN="0"/>
             <para PARENT="Body text"/>
-            <ITEXT FONTSIZE="12" CH="Try this out yourself by editing the commands.csv file in the repository and replacing the contents with your own instructions to the arm"/>
+            <ITEXT FONTSIZE="12" CH="Try this out yourself by editing the 'commands.csv' file in the repository and replacing the contents with your own instructions to the arm"/>
             <ITEXT CH="."/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
@@ -435,12 +456,18 @@
             <ITEXT CH="Running your program"/>
             <para PARENT="Body title"/>
             <para PARENT="Body text"/>
-            <ITEXT CH="Running your program is as simple as running the command ./commander.py commands.csv from the command line on your Raspberry Pi. The script will output each step of your program as it runs it. You can find a example output of my terminal below as an example run using the commands.csv file in the repository:"/>
+            <ITEXT CH="Running your program is as simple as running the command "/>
+            <ITEXT FONT="Monaco Regular" FONTSIZE="11" CH="./commander.py commands.csv"/>
+            <ITEXT CH=" from the command line on your Raspberry Pi. The script will output each step of your program as it runs. You can find a sample output of my terminal below as an example run using the 'commands.csv' file in the repository:"/>
             <para PARENT="Body text"/>
             <para PARENT="Body text"/>
             <ITEXT FONTSIZE="9" CH=" ./commander.py commands.csv "/>
             <para PARENT="Code"/>
-            <ITEXT FONTSIZE="9" CH=" Running command 'shoulder-up' for a duration of 1.000000 second(s) with a pause of 1.000000 second(s)"/>
+            <ITEXT FONTSIZE="9" CH=" Running command 'shoulder-up' for a duration "/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="9" CH=" of 1.000000 second(s) with a pause of 1.000000"/>
+            <para PARENT="Code"/>
+            <ITEXT FONTSIZE="9" CH=" second(s)"/>
             <para PARENT="Code"/>
             <ITEXT FONTSIZE="9" CH=" Sending command shoulder-up"/>
             <para PARENT="Code"/>
@@ -459,9 +486,9 @@
             <ITEXT FCOLOR="Blue" FSHADE="100" CH="http://solderintheveins.co.uk/contact-me/"/>
             <para PARENT="Body text"/>
             <para/>
-            <ITEXT FONT="FreeSans Bold" FONTSIZE="14" FEATURES="inherit underline" CH="Where to buy?"/>
-            <para/>
-            <para/>
+            <ITEXT CH="Where to buy?"/>
+            <para PARENT="Body title"/>
+            <para PARENT="Body title"/>
             <ITEXT CH="In the UK the robot arm is available from Maplin ("/>
             <ITEXT FCOLOR="Blue" CH="http://www.maplin.co.uk"/>
             <ITEXT CH=" - code A37JN) or  elsewhere from Robotikits ("/>
@@ -525,11 +552,11 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.498897637795" YPOS="432.535433113384" WIDTH="256.436535433071" HEIGHT="27" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 27 256.437 27 256.437 27 256.437 27 0 27 0 27 0 27 0 27 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 27 256.437 27 256.437 27 256.437 27 0 27 0 27 0 27 0 27 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.498897637795" YPOS="426.866141774801" WIDTH="256.436535433071" HEIGHT="27" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 27 256.437 27 256.437 27 256.437 27 0 27 0 27 0 27 0 27 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 27 256.437 27 256.437 27 256.437 27 0 27 0 27 0 27 0 27 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.49889762126" YPOS="489.228346499212" WIDTH="256.4365354" HEIGHT="45.7716535007884" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 45.7717 256.437 45.7717 256.437 45.7717 256.437 45.7717 0 45.7717 0 45.7717 0 45.7717 0 45.7717 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 45.7717 256.437 45.7717 256.437 45.7717 256.437 45.7717 0 45.7717 0 45.7717 0 45.7717 0 45.7717 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.49889762126" YPOS="483.559055160629" WIDTH="256.437" HEIGHT="45.7717" RADRECT="0" FRTYPE="0" CLIPEDIT="1" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 45.7717 256.437 45.7717 256.437 45.7717 256.437 45.7717 0 45.7717 0 45.7717 0 45.7717 0 45.7717 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 45.7717 256.437 45.7717 256.437 45.7717 256.437 45.7717 0 45.7717 0 45.7717 0 45.7717 0 45.7717 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -569,7 +596,7 @@
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
-        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.49889762126" YPOS="693" WIDTH="256.4365354" HEIGHT="30.1574803574816" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 30.1575 256.437 30.1575 256.437 30.1575 256.437 30.1575 0 30.1575 0 30.1575 0 30.1575 0 30.1575 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 30.1575 256.437 30.1575 256.437 30.1575 256.437 30.1575 0 30.1575 0 30.1575 0 30.1575 0 30.1575 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
+        <PAGEOBJECT OwnPage="0" PTYPE="6" XPOS="410.49889762126" YPOS="687.330708661417" WIDTH="256.4365354" HEIGHT="30.1574803574816" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="Yellow" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="20" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="0" TEXTFLOW="0" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 30.1575 256.437 30.1575 256.437 30.1575 256.437 30.1575 0 30.1575 0 30.1575 0 30.1575 0 30.1575 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 256.437 0 256.437 0 256.437 0 256.437 0 256.437 30.1575 256.437 30.1575 256.437 30.1575 256.437 30.1575 0 30.1575 0 30.1575 0 30.1575 0 30.1575 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="12" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
             <trail/>
             <PageItemAttributes/>
         </PAGEOBJECT>
@@ -613,7 +640,7 @@
             <PageItemAttributes/>
         </PAGEOBJECT>
         <PAGEOBJECT OwnPage="1" PTYPE="4" XPOS="128.347086614173" YPOS="1623.28346452835" WIDTH="311.8166929" HEIGHT="73.0472441330669" RADRECT="0" FRTYPE="0" CLIPEDIT="0" PWIDTH="1" PCOLOR="None" PCOLOR2="None" COLUMNS="1" COLGAP="0" NAMEDLST="" SHADE="100" SHADE2="100" GRTYP="0" ROT="0" PLINEART="1" PLINEEND="0" PLINEJOIN="0" LOCALSCX="1" LOCALSCY="1" LOCALX="0" LOCALY="0" PICART="1" PLTSHOW="0" BASEOF="0" textPathType="0" textPathFlipped="0" FLIPPEDH="0" FLIPPEDV="0" SCALETYPE="1" RATIO="1" PRINTABLE="1" ANNOTATION="0" ANNAME="" TEXTFLOWMODE="1" TEXTFLOW="1" TEXTFLOW2="0" TEXTFLOW3="0" AUTOTEXT="0" EXTRA="0" TEXTRA="0" BEXTRA="0" REXTRA="0" FLOP="0" PFILE="" PFILE2="" PFILE3="" PRFILE="" EPROF="" IRENDER="1" EMBEDDED="1" LOCK="0" LOCKR="0" REVERS="0" TransValue="0" TransValueS="0" TransBlend="0" TransBlendS="0" isTableItem="0" TopLine="0" LeftLine="0" RightLine="0" BottomLine="0" isGroupControl="0" NUMDASH="0" DASHS="" DASHOFF="0" NUMPO="16" POCOOR="0 0 0 0 311.817 0 311.817 0 311.817 0 311.817 0 311.817 73.0472 311.817 73.0472 311.817 73.0472 311.817 73.0472 0 73.0472 0 73.0472 0 73.0472 0 73.0472 0 0 0 0 " NUMCO="16" COCOOR="0 0 0 0 311.817 0 311.817 0 311.817 0 311.817 0 311.817 73.0472 311.817 73.0472 311.817 73.0472 311.817 73.0472 0 73.0472 0 73.0472 0 73.0472 0 73.0472 0 0 0 0 " NUMGROUP="0" GROUPS="" startArrowIndex="0" endArrowIndex="0" OnMasterPage="" ImageClip="" ImageRes="1" Pagenumber="0" isInline="0" fillRule="1" doOverprint="0" gXpos="0" gYpos="0" gWidth="0" gHeight="0" LAYER="6" BOOKMARK="0" NEXTITEM="-1" BACKITEM="-1">
-            <ITEXT FONTSIZE="9" CH=" git clone  https://github.com/peterlavelle/maplinarm"/>
+            <ITEXT FONTSIZE="9" CH=" git clone https://github.com/peterlavelle/maplinarm"/>
             <para PARENT="Code"/>
             <ITEXT FONTSIZE="9" CH=" Cloning into 'maplinarm'..."/>
             <para PARENT="Code"/>
