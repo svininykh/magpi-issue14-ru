@@ -1,55 +1,55 @@
-A Pi and a cup of Java, please!
-Difficulty: medium
+Raspberry Pi и чашечку Java, пожалуйста!
+Сложность: средняя
 
- 
-You will need:
-- A Raspberry Pi with Raspbian.
-- 150 MB of free space in your SD card.
-- Basic knowledge of programming.
-- Basic command-line usage.
 
-Introduction
+Что вам необходимо:
+- Raspberry Pi и ОС Raspbian.
+- 150 Мб свободного места на SD карте.
+- Базовые знания программирования.
+- Базовые навыки использования командной строки.
 
-In this article I'll show you how to write and run Java programs on your Raspberry Pi.
+Вступление
 
-Java is an object-oriented language designed to run in many operating systems without requiring   a recompilation of the source code. Java also provides a vast technology that offers solutions to more advanced problems like running complex web sites or high-end mission-critical algorithms. In this article I will focus on the very basics of the language. Once you master the language there are plenty of web sites on the Internet with loads of details of the technology and also full of examples.
+В данной статье я расскажу вам как писать и запускать Java программы на вашем Raspberry Pi.
 
-I'll first show you the steps to install Java on the Raspberry Pi. Then, we'll create a couple of basic Java programs... and we'll run them! 
+Java, это язык объектно-ориентированного программирования для запуска исходного кода без необходимости комилляции под конкретную операционную систему. Также в Java входит широкий спектр технологий предназначенных для решением задач в таких областях, как запуск кластеров веб-сайтов или высоконагруженных приложений критичных к результату выполнения. В данной статье я затрону только основы данного языка. Как только вы освоите его основы, вы без труда найдёте в Интернет веб-сайты с более подробным описанием технологий Java и содержащие более сложные примеры по ним.
 
-This article shows you the running examples first, and delves into concepts later. The idea behind it is that it will be easier for you to look at real java programs and try to identify the new elements and their functions by yourself. Once you write the program and run it, I will explain the novelties.
+В начале я покажу вам, как установить Java на Raspberry Pi. Затем мы создадим пару простых Java программ... И только потом мы их запустим! 
 
-1. Installation
+Эта статья в начале показывает вам в общем как запустить примеры, а затем разъяснеет более глубоко принципы их работы. Идея в том, что это позволит вам легче увидеть основы написания реальных Java программ, а затем вы самостоятельно попробуете определить новые элементы и их функции. После того, как вы напишите и запустите программу, я постараюсь объяснить эти новшества.
 
-To write, compile and run your program, you'll need two things: a text editor, and a JDK.
+1. Установка
 
-You can use any text editor to write a Java program. I prefer Geany because of its syntax coloring, but Leafpad or GEdit will work too.
+Чтобы написать, копиллировать и запустить программу вам необходимо две вещи: текстовый редактор и JDK.
 
-As a JDK I chose OpenJDK 7. A JDK includes (mainly) a compiler and a JVM. The compiler generates an executable program, and the JVM is able to run this program.
+Вы можете использовать любой текстовый редактор для написания Java программ. Я предпочитаю Geany, так как он поддерживает подсветку синтаксиса, но Leafpad или GEdit это тоже делают.
 
-To install Geany and OpenJDK 7 open a terminal window and type:
+В качестве JDK я выбрал OpenJDK 7. Стандартно в пакет JDK входит компиллятор и виртуальная машина Java(JVM). Компиллятор генерирует из исходного кода программу для выполнения, а JVM обеспечивает их запуск.
+
+Установим Geany и OpenJDK 7 открыв окно терминала и набрав:
 
   sudo apt-get install openjdk-7-jdk geany
 
-Type Y when asked to confirm. It's going to take at least 9 minutes to download and install everything, but it can take more depending on the speed of your internet connection.
+Введём Y для подтверждения установки. Это займёт около 9 минут на загрузку и установку всех необходимых пакетов, но это может занять и больше времени, так как всё зависит от скорости вашего интернет соединения.
 
-Once finished, check that both are correctly installed by making sure you can open Geany from the main menu inside "Programming"; to check OpenJDK7, open a terminal window and type:
+После завершения проверьте, что всё корректно было установлено. Для этого вы можете открыть Geany из вкладки "Programming" основного меню Raspbian. А для проверки OpenJDK7, откройте окно терминала и наберите:
 
   java -version
 
-It must display a few lines starting with:
+На экране должно появится несколько строк начинающихся с:
 
   java version "1.7...
   OpenJDK ...
 
-2. Running our first program
+2. Запуск первой программы
 
-Let's create a directory to store our programs. I chose a directory named "cupofjava", but you can choose any directory you want. Open a terminal and type:
+Начнём с создания каталога для хранения наших программ. Я выбрал для него имя "cupofjava", но вы можете по желанию выбрать любое другое. Открываем окно терминала и набираем:
 
   mkdir cupofjava
 
-Now let's write our first program (a class). I'll call it "HiThere". Please know that java is an Object Oriented program and that every program is a class that in turn can use other classes.
+Теперь начнём писать нашу первую программу(класс) на Java. Я назову его "HiThere". Пожалуйста помните, что Java, это объектно-ориентированный язык программирования, и что каждая программа является классом, который в свою очередь можно использовать другими классами.
 
-Open the text editor (Geany in my case) to create the file HiThere.java and save it in the directory we just created. Type (or copy) the following program in this file:
+Открываем текстовый редактор(в моём случае Geany) для создания файла HiThere.java и сохраняем его в предварительно созданном каталоге. В этом файле набираем(или копируем) следующий исходный код программы:
 
 public class HiThere {
 
@@ -59,39 +59,39 @@ public class HiThere {
 
 }
 
-Let's now compile it. Using the terminal, go to the directory "cupofjava" (where you created the program) using:
+А теперь компилируем его. Используя окно терминала переходим в каталог "cupofjava"(где до этого вы создали программу):
 
   cd cupofjava
 
-and type:
+и набираем:
 
   javac HiThere.java
 
-The javac command compiles java programs. It will analyse the source code you typed and will generate the executable program. After 15 seconds or so, this command should silently finish. If you misspelled something it will show an error message that will display where the problem is. If this is the case go back to the text editor, check your code and fix the misspelling, save the file, and try the command again until it doesn't show errors anymore. Once successfully compiled you'll find a new file in the same directory called HiThere.class. This is the compiled program that will be executed.
+Команда javac компиллирует программы написанные на Java. Она проанализировав набранный вами исходный код генерирует программу для запуска. Через 15 секунд или около того, данная команда закончит выполнение. Если вы допустили ошибку она об этом сообщит, указав где эта проблема возникла. Для исправления вернитесь в текстовый редактор, проверьте свой код и исправьте допущенные ошибки, сохраните файл, и попробуйте запустить компилляцию повторно. Если ошибок больше нет, то компилляция выполнена успешно. После чего вы найдёте новый файл HiThere.class в текущем каталоге. Это программа и будет вами запускаться.
 
-Well, let's run our program now. On the terminal type:
+Хорошо, тепрь запустим нашу программу. В окне терминала набираем:
 
   java HiThere
 
-You don't need to specify the .class extension. Did you see the difference? The command javac compiles programs, and the command java executes them.
+Вам не обязательно указывать расширение .class. А в чём разница? Команда javac компиллирует программы, а команда java их запускает.
 
-The program will run and will display:
+Программа будет запущена и выполнена:
 
   Hi there!
 
-Well... Congratulations! You have written and run your first Java program on the Raspberry Pi.
+Отлично... Поздравляю! Вы написали и запустили вашу первую Java программу на Raspberry Pi.
 
-You probably noticed the program took a few seconds to write that message. Why so slow? Actually, Java is quite fast. The whole program took only a couple of milliseconds to run, but Java needs a few seconds at the beginning to load the Java environment--the JVM. The good news is that once the JVM is loaded, the program runs very fast.
+Наверное вы заметили, что программе потребовалось несколько секунд для того, чтобы написать это сообщение. Почему так долго? На самом деле, Java работает довольно быстро. Программе в целом понадобилось только пара миллисекунд для выполнение, всё остальное время потребовалось на загрузку в начале JVM среды для выполнения Java кода. Но есть и приятная новость, что после загрузки JVM программу будет работать очень быстро.
 
-Well, let's now look at the program in more detail. There's only one line in it that is actually executed. This line is:
+Хорошо, а теперь можем рассмотреть программу более внимательно. В ней по сути выполняется только одна строка. Это строка:
 
   System.out.println("A Java Pi!");
 
-The other lines specify the name of the class "HiThere" (in line 1), and the name of the method main in line 3. This class--as any other Java class--can have many methods but we are using only a single one in this example.
+В остальных строка задаётся название класса "HiThere" (в строке 1), а также название основного метода в строке 3). В данный класс, как и в любой другой класс Java, может входить много методов, но для данного примера мы используем только один основной метод main.
 
-Challenge #1: Your turn now: on the text editor change the message in between double quotes in the source file, from "A Java Pi!" to "My name is Name." (use your name) and save it. On the terminal compile the program again and run it using the two commands (javac and java) shown before. If you do it right, the program will display your name now. Do it!
+Усложним задачу #1: Ваши действия. Откройте файл с исходным кодом в текстовом редакторе, измените сообщение в кавычках с "A Java Pi!" на "My name is Name."(введите своё имя) и сохраните результат. В окне терминала снова скомпилируйте программу и запустите её используемыми уже командами javac и java. Если всё сделали правильно, то теперь программа покажет ваше имя. Вы отлично справились!
 
-A note: The syntax of Java--that is, how to write a program--is very similar to the syntax of the C language. Any programmer with knowledge of C will find the basics of Java very easy to understand.
+Примечание: Синтаксис написания программ на языке Java очень похож на синтаксис языка C. Любой программист знакомый с C сможет легко освоит основы Java.
 
 3. Java variables and Control flow
 
@@ -151,6 +151,6 @@ In the example, the if statement checks for the value of face. That's why the ex
 
 The while statement, on the other hand, executes the included block four times, because it checks the value of the variable d is less than 4. That variable starts in zero and increases by one at the end of the block. Therefore the first four times (0, 1, 2, 3) the while succeeds, but on the fifth one (when it has the value 4) it fails.
 
-Challenge #2: Change the program to roll 7 dice, where each dice has 10 faces. Once you save your changes, go to the terminal compile the program again and run it using the two commands (javac and java) shown before. If you do it right, the program will now display show all seven dice. Go for it!
+Усложним задачу #2: Change the program to roll 7 dice, where each dice has 10 faces. Once you save your changes, go to the terminal compile the program again and run it using the two commands (javac and java) shown before. If you do it right, the program will now display show all seven dice. Go for it!
 
 
